@@ -1,117 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Kevin</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000;
-      color: #FFD700;
-    }
-    .gold-text {
-      color: #FFD700;
-    }
-    .gold-border {
-      border-color: #FFD700 !important;
-    }
-    .section-title {
-      border-bottom: 2px solid #FFD700;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-    }
-    a {
-      color: #FFD700;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Kevin Mubarak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        accent: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 5px;
+            background-color: #3B82F6;
+            border-radius: 5px;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-  <div class="container py-5">
-
-    <!-- Header -->
-    <header class="text-center mb-5">
-      <h1 class="fw-bold">Kevin Mubarak</h1>
-      <p class="fs-5">[Posisi / Profesi] • [Email] • [Website]</p>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">Kevin Mubarak</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="#profile" class="hover:text-primary transition">Profile</a></li>
+                    <li><a href="#skills" class="hover:text-primary transition">Skills</a></li>
+                    <li><a href="#education" class="hover:text-primary transition">Education</a></li>
+                    <li><a href="#experience" class="hover:text-primary transition">Experience</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="mb-5">
-      <h2 class="section-title">Tentang Saya</h2>
-      <p>Saya adalah seorang profesional di bidang Frontend dengan minat besar pada [topik/keterampilan]. Memiliki pengalaman dalam mengatur sebuah komunitas, saya senang menciptakan solusi yang berdampak dan terukur.</p>
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">Hi, I'm Kevin Mubarak</h2>
+                <p class="text-xl text-gray-600 mb-6">Informatics Engineering Student & Web Developer</p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">View Projects</a>
+                    <a href="#contact" class="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                    <img src="https://kevin-mubarak-2022310003.netlify.app/Kevin_Mubarak_-_S1_Teknik_Informatika_(2)-min%20(1).jpg" 
+                         alt="Kevin Mubarak" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="mb-5">
-      <h2 class="section-title">Keahlian</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <h5 class="gold-text">Hard Skills</h5>
-          <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <!-- <li>Python, React, Node.js</li> -->
-            <li>Figma, OBS</li>
-          </ul>
+    <!-- Profile Section -->
+    <section id="profile" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">PROFILE</h2>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Saya, Kevin Mubarak, adalah mahasiswa Teknik Informatika dengan pengalaman dalam pengembangan website sederhana menggunakan HTML, JavaScript, dan CSS. Saya memiliki minat yang kuat dalam teknologi dan terus mengembangkan keterampilan saya, termasuk di dunia streaming yang saat ini sedang saya belajari.
+                </p>
+            </div>
         </div>
-        <div class="col-md-6">
-          <h5 class="gold-text">Soft Skills</h5>
-          <ul>
-            <!-- <li>Problem Solving</li> -->
-            <li>Team Collaboration</li>
-            <li>Time Management</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-5">
-      <h2 class="section-title">Proyek</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="border rounded-3 p-3 gold-border">
-            <h5 class="mb-1">Tugas Proyek IOT Smart Handwash</h5>
-            <p class="mb-1">Jadi Website yang saya buat ini adalah untuk menampilkan apa saja bahan dan script program yang dibutuhkan dalam membuat IOT Smart HandWash tersebut</p>
-            <a href="https://smart-handwash.netlify.app/" target="_blank">Lihat proyek</a>
-          </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">SKILLS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Illustration Design</h3>
+                    <p class="text-gray-600">Kemampuan dalam membuat desain ilustrasi yang kreatif dan menarik.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Website Design</h3>
+                    <p class="text-gray-600">Mendesain website yang responsif dan user-friendly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Database Analysis</h3>
+                    <p class="text-gray-600">Analisis dan perancangan database untuk aplikasi web.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Pengembangan website menggunakan HTML, CSS, dan JavaScript.</p>
+                </div>
+            </div>
         </div>
-
-
-        <div class="col-md-6">
-          <div class="border rounded-3 p-3 gold-border">
-            <h5 class="mb-1">Tugas Proyek System Expert [Diagnosa pada penyakit Tanaman]</h5>
-            <p class="mb-1">jadi saya membuat Website Sistem pakar yang dapat membantu diagnosa penyakit pada Tanaman, akan tetapi proyek yang saya belum dikembangkan kembali karena Pakar dari Tanaman ini sangat sedikit, jadi data yang saya dapatkan masih sangat sedikit</p>
-            <a href="https://penyakit-tanaman.netlify.app/" target="_blank">Lihat proyek</a>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="mb-5">
-      <h2 class="section-title">Pendidikan & Sertifikat</h2>
-      <ul>
-        <li>Uji Kompetensi Pembuatan Aplikasi Desktop (2022)</li>
-      </ul>
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">EDUCATION HISTORY</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-primary">Membuat Database SQL</h3>
+                    <p class="text-lg text-gray-700 font-medium">SMK Taruna Bangsa</p>
+                    <p class="text-gray-500">2020-2022</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-primary">Memahami bahasa Pemrograman</h3>
+                    <p class="text-lg text-gray-700 font-medium">SMK Taruna Bangsa</p>
+                    <p class="text-gray-500">2019-2022</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="mb-5">
-      <h2 class="section-title">Kontak</h2>
-      <p>Email: Kevinubarak.rpl3.2019@email.com</p>
-      <!-- <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/Kevin Mubarak</a></p> -->
-      <p>Website: <a href="https://whimsical-lily-dbd6d9.netlify.app/" target="_blank">CDB Community</a></p>
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">WORK EXPERIENCE</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-primary">Desain Grafis</h3>
+                    <p class="text-lg text-gray-700 mb-2">Membuat banner dan poster menggunakan canva</p>
+                    <p class="text-gray-500">Oktober 2021 - Desember 2021</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-primary">Dewan Perwakilan Mahasiswa - Komisi III</h3>
+                    <p class="text-lg text-gray-700 mb-2">Aspirasi & Advokasi</p>
+                    <p class="text-gray-500">2023 - 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">MY PROJECTS</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-primary mb-6">Project Campus</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-box-open text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Smart Box Packet</h4>
+                            <p class="text-gray-600 mb-4">Website untuk manajemen paket pintar.</p>
+                            <a href="https://smart-box-packet.netlify.app/" target="_blank" class="text-primary font-medium hover:underline flex items-center">
+                                Visit Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-green-100 to-teal-100 flex items-center justify-center">
+                            <i class="fas fa-hands-wash text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Smart Hand Wash</h4>
+                            <p class="text-gray-600 mb-4">Website untuk sistem cuci tangan pintar.</p>
+                            <a href="https://smart-handwash.netlify.app/" target="_blank" class="text-primary font-medium hover:underline flex items-center">
+                                Visit Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-yellow-100 to-amber-100 flex items-center justify-center">
+                            <i class="fas fa-leaf text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Diagnosa Penyakit Sayur</h4>
+                            <p class="text-gray-600 mb-4">Website untuk diagnosa penyakit pada tanaman sayur.</p>
+                            <a href="https://penyakit-tanaman.netlify.app/" target="_blank" class="text-primary font-medium hover:underline flex items-center">
+                                Visit Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold text-primary mb-6">Project Personal</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-purple-100 to-pink-100 flex items-center justify-center">
+                            <i class="fab fa-discord text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Komunitas Discord</h4>
+                            <p class="text-gray-600 mb-4">Website untuk komunitas Discord.</p>
+                            <a href="https://cdb-official.netlify.app/" target="_blank" class="text-primary font-medium hover:underline flex items-center">
+                                Visit Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">CONTACT</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xl mb-6 text-center">Silakan hubungi saya melalui kontak di bawah ini:</p>
+                <div class="space-y-4 bg-white/10 p-8 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-phone text-primary text-xl"></i>
+                        </div>
+                        <a href="https://wa.me/+6281282012692"><p class="text-lg">0812-8201-2692</p></a>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <p class="text-lg">kevinmubarok.rp13.2019@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center mt-5">
-      <p class="small">&copy; 2025 Kevin Mubarak. All rights reserved.</p>
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Kevin Mubarak. All Rights Reserved.</p>
+            <!-- <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div> -->
+        </div>
     </footer>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
