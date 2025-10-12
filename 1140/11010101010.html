@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Kevin Mubarak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        accent: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 5px;
+            background-color: #3B82F6;
+            border-radius: 5px;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .project-image {
+            width: 700px;
+            height: 300px;
+            object-fit: contain;
+        }
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .link-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">Kevin Mubarak</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <!-- Navigation links removed as requested -->
+                </ul>
+            </nav>
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">Hi, I'm Kevin Mubarak</h2>
+                <p class="text-xl text-gray-600 mb-6">Informatics Engineering Student & Web Developer</p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary transition">View Projects</a>
+                    <a href="#contact" class="border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                    <img src="https://kevin-mubarak-2022310003.netlify.app/Kevin_Mubarak_-_S1_Teknik_Informatika_(2)-min%20(1).jpg" 
+                         alt="Kevin Mubarak" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">REKOMENDASI WEB</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-primary mb-6">Project anime</h3>
+                <div id="anime-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- anime projects will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold text-primary mb-6">Project Personal</h3>
+                <div id="personal-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Personal projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">CONTACT</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xl mb-6 text-center">Silakan hubungi saya melalui kontak di bawah ini:</p>
+                <div class="space-y-4 bg-white/10 p-8 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-phone text-primary text-xl"></i>
+                        </div>
+                        <a href="https://wa.me/+6281282012692"><p class="text-lg">0812-8201-2692</p></a>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-primary text-xl"></i>
+                        </div>
+                        <p class="text-lg">kevinmubarok.rp13.2019@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Kevin Mubarak. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // JSON data for projects dengan multiple links
+        const projectsData = {
+            "anime": [
+                {
+                    "title": "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu",
+                    "description": "Lastame",
+                    "links": [
+                        {
+                            "label": "Season 1",
+                            "url": "https://acefile.co/f/100911547",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "GitHub Repository",
+                            "url": "https://github.com/kevinmubarak/smart-box-packet",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "Documentation",
+                            "url": "https://docs.smart-box-packet.com",
+                            "icon": "fas fa-book"
+                        }
+                    ],
+                    "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm-7rVOZ4s8767tXt24hOIKnS55VPVjB3zgQ&s",
+                    "gradient": "from-blue-100 to-indigo-100"
+                },
+                {
+                    "title": "Kimetsu No Yaiba",
+                    "description": "Demon Slayer",
+                    "links": [
+                        {
+                            "label": "Season 1 [1-13]",
+                            "url": "https://acefile.co/f/25448807",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "Season 1 [14-26]",
+                            "url": "https://acefile.co/f/25448804",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "Movie Mugen Ressha-hen",
+                            "url": "https://acefile.co/f/47665374",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "GitHub Repository", 
+                            "url": "https://github.com/kevinmubarak/smart-handwash",
+                            "icon": "fab fa-github"
+                        }
+                    ],
+                    "icon": "https://cdn.rri.co.id/berita/Palembang/o/1720683518348-filters_quality(95)format(webp)/wjr3uy31wg0s7lx.jpeg",
+                    "gradient": "from-green-100 to-teal-100"
+                },
+                {
+                    "title": "Website Diagnosa Penyakit Sayur",
+                    "description": "Website untuk diagnosa penyakit pada tanaman sayur.",
+                    "links": [
+                        {
+                            "label": "Live Demo",
+                            "url": "https://penyakit-tanaman.netlify.app/",
+                            "icon": "fas fa-external-link-alt"
+                        }
+                    ],
+                    "icon": "https://cdn-icons-png.flaticon.com/512/684/684614.png",
+                    "gradient": "from-yellow-100 to-amber-100"
+                }
+            ],
+            "personal": [
+                {
+                    "title": "Website Komunitas Discord",
+                    "description": "Website untuk komunitas Discord.",
+                    "links": [
+                        {
+                            "label": "Live Website",
+                            "url": "https://cdb-official.netlify.app/",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "Join Discord",
+                            "url": "https://discord.gg/example",
+                            "icon": "fab fa-discord"
+                        }
+                    ],
+                    "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968756.png",
+                    "gradient": "from-purple-100 to-pink-100"
+                },
+                {
+                    "title": "Portfolio Website",
+                    "description": "Website portfolio pribadi.",
+                    "links": [
+                        {
+                            "label": "View Portfolio",
+                            "url": "https://kevin-mubarak-portfolio.netlify.app/",
+                            "icon": "fas fa-external-link-alt"
+                        },
+                        {
+                            "label": "Source Code",
+                            "url": "https://github.com/kevinmubarak/portfolio",
+                            "icon": "fab fa-github"
+                        }
+                    ],
+                    "icon": "https://cdn-icons-png.flaticon.com/512/1006/1006771.png",
+                    "gradient": "from-red-100 to-orange-100"
+                },
+                {
+                    "title": "E-Commerce Store",
+                    "description": "Website toko online sederhana.",
+                    "links": [
+                        {
+                            "label": "Visit Store",
+                            "url": "https://kevin-store.netlify.app/",
+                            "icon": "fas fa-shopping-cart"
+                        },
+                        {
+                            "label": "GitHub Repo",
+                            "url": "https://github.com/kevinmubarak/ecommerce",
+                            "icon": "fab fa-github"
+                        },
+                        {
+                            "label": "API Docs",
+                            "url": "https://api.kevin-store.com/docs",
+                            "icon": "fas fa-code"
+                        }
+                    ],
+                    "icon": "https://cdn-icons-png.flaticon.com/512/1170/1170678.png",
+                    "gradient": "from-cyan-100 to-blue-100"
+                }
+            ]
+        };
+
+        // Function to create project card HTML dengan multiple links
+        function createProjectCard(project) {
+            let linksHTML = '';
+            
+            if (project.links && project.links.length > 0) {
+                if (project.links.length === 1) {
+                    // Jika hanya ada 1 link, tampilkan seperti biasa
+                    const link = project.links[0];
+                    linksHTML = `
+                        <a href="${link.url}" target="_blank" class="text-primary font-medium hover:underline flex items-center">
+                            ${link.label} <i class="${link.icon} ml-2 text-sm"></i>
+                        </a>
+                    `;
+                } else {
+                    // Jika multiple links, tampilkan dalam container khusus
+                    linksHTML = '<div class="links-container mt-2">';
+                    project.links.forEach(link => {
+                        linksHTML += `
+                            <div class="link-item">
+                                <a href="${link.url}" target="_blank" class="text-primary font-medium hover:underline flex items-center text-sm">
+                                    <i class="${link.icon} mr-2 text-xs"></i>
+                                    ${link.label}
+                                </a>
+                            </div>
+                        `;
+                    });
+                    linksHTML += '</div>';
+                }
+            }
+
+            return `
+                <div class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 bg-gradient-to-r ${project.gradient} flex items-center justify-center">
+                        <img src="${project.icon}" alt="${project.title}" class="project-image">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">${project.title}</h4>
+                        <p class="text-gray-600 mb-4">${project.description}</p>
+                        ${linksHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to populate projects
+        function populateProjects() {
+            const animeContainer = document.getElementById('anime-projects');
+            const personalContainer = document.getElementById('personal-projects');
+            
+            // Clear existing content
+            animeContainer.innerHTML = '';
+            personalContainer.innerHTML = '';
+            
+            // Populate anime projects
+            projectsData.anime.forEach(project => {
+                animeContainer.innerHTML += createProjectCard(project);
+            });
+            
+            // Populate personal projects
+            projectsData.personal.forEach(project => {
+                personalContainer.innerHTML += createProjectCard(project);
+            });
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Initialize projects when page loads
+        document.addEventListener('DOMContentLoaded', populateProjects);
+
+        // Fallback untuk gambar yang error
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('error', function(e) {
+                if (e.target.tagName === 'IMG' && e.target.classList.contains('project-image')) {
+                    e.target.src = 'https://cdn-icons-png.flaticon.com/512/3767/3767084.png';
+                    e.target.alt = 'Default icon';
+                }
+            }, true);
+        });
+    </script>
+</body>
+</html>
