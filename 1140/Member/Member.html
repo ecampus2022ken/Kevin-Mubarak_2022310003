@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Member - Kevin Mubarak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                        accent: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 5px;
+            background-color: #3B82F6;
+            border-radius: 5px;
+        }
+        .member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3B82F6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .uid-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">Kevin Mubarak</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="index.html#profile" class="hover:text-primary transition">Profile</a></li>
+                    <li><a href="index.html#skills" class="hover:text-primary transition">Skills</a></li>
+                    <li><a href="index.html#education" class="hover:text-primary transition">Education</a></li>
+                    <li><a href="index.html#experience" class="hover:text-primary transition">Experience</a></li>
+                    <li><a href="index.html#projects" class="hover:text-primary transition">Projects</a></li>
+                    <li><a href="members.html" class="text-primary font-semibold transition">Members</a></li>
+                    <li><a href="index.html#contact" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">Daftar Member</h2>
+            <p class="text-xl text-gray-600 mb-6">Total <span id="totalMembers" class="font-bold text-primary">0</span> Member Terdaftar</p>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">DAFTAR MEMBER</h2>
+            
+            <!-- Filter Section -->
+            <div class="mb-8 bg-gray-50 p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold mb-4 text-primary">Filter Member</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Cari berdasarkan Username</label>
+                        <input type="text" id="usernameFilter" placeholder="Masukkan username..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Cari berdasarkan UID</label>
+                        <input type="text" id="uidFilter" placeholder="Masukkan UID..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <button id="resetFilter" class="text-primary hover:text-secondary transition flex items-center">
+                        <i class="fas fa-redo-alt mr-2"></i> Reset Filter
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="text-center py-8">
+                <div class="loading-spinner mb-4"></div>
+                <p class="text-gray-600">Memuat data member...</p>
+            </div>
+            
+            <!-- Error State -->
+            <div id="errorState" class="hidden text-center py-8">
+                <i class="fas fa-exclamation-triangle text-5xl text-red-500 mb-4"></i>
+                <p class="text-xl text-gray-600 mb-4">Gagal memuat data member</p>
+                <button id="retryButton" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition">
+                    Coba Lagi
+                </button>
+            </div>
+            
+            <!-- Members Grid -->
+            <div id="membersContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                <!-- Member cards will be populated by JavaScript -->
+            </div>
+            
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-8">
+                <i class="fas fa-users text-5xl text-gray-400 mb-4"></i>
+                <p class="text-xl text-gray-600">Tidak ada member yang sesuai dengan filter</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Kevin Mubarak. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Configuration
+        const CONFIG = {
+            JSON_URL: 'members.json',
+            CACHE_DURATION: 5 * 60 * 1000 // 5 minutes cache
+        };
+
+        // Global variables
+        let membersData = [];
+
+        // Function to fetch data from JSON file
+        async function fetchMembersData() {
+            try {
+                // Check cache first
+                const cachedData = getCachedData();
+                if (cachedData) {
+                    return cachedData;
+                }
+
+                // Fetch from JSON file
+                const response = await fetch(CONFIG.JSON_URL);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                // Cache the data
+                cacheData(data);
+                
+                return data;
+            } catch (error) {
+                console.error('Error fetching member data:', error);
+                throw error;
+            }
+        }
+
+        // Cache management functions
+        function getCachedData() {
+            const cached = localStorage.getItem('membersCache');
+            const timestamp = localStorage.getItem('membersCacheTimestamp');
+            
+            if (cached && timestamp) {
+                const now = Date.now();
+                const cacheTime = parseInt(timestamp);
+                
+                if (now - cacheTime < CONFIG.CACHE_DURATION) {
+                    return JSON.parse(cached);
+                }
+            }
+            
+            return null;
+        }
+
+        function cacheData(data) {
+            localStorage.setItem('membersCache', JSON.stringify(data));
+            localStorage.setItem('membersCacheTimestamp', Date.now().toString());
+        }
+
+        // Function to show/hide UI states
+        function showLoading() {
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('membersContainer').classList.add('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
+        }
+
+        function showError() {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.remove('hidden');
+            document.getElementById('membersContainer').classList.add('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
+        }
+
+        function showMembers() {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('membersContainer').classList.remove('hidden');
+            document.getElementById('emptyState').classList.add('hidden');
+        }
+
+        function showEmpty() {
+            document.getElementById('loadingState').classList.add('hidden');
+            document.getElementById('errorState').classList.add('hidden');
+            document.getElementById('membersContainer').classList.add('hidden');
+            document.getElementById('emptyState').classList.remove('hidden');
+        }
+
+        // Function to render member cards
+        function renderMembers(members) {
+            const container = document.getElementById('membersContainer');
+            container.innerHTML = '';
+            
+            // Update total members count
+            document.getElementById('totalMembers').textContent = members.length;
+            
+            if (members.length === 0) {
+                showEmpty();
+                return;
+            }
+            
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'member-card bg-gray-50 rounded-xl overflow-hidden shadow-md';
+                
+                // Generate avatar color based on member ID for consistency
+                const avatarColors = [
+                    'from-blue-100 to-indigo-100',
+                    'from-green-100 to-teal-100',
+                    'from-purple-100 to-pink-100',
+                    'from-yellow-100 to-amber-100',
+                    'from-red-100 to-orange-100',
+                    'from-cyan-100 to-blue-100'
+                ];
+                const avatarColor = avatarColors[member.id % avatarColors.length];
+                
+                card.innerHTML = `
+                    <div class="h-48 bg-gradient-to-r ${avatarColor} flex items-center justify-center relative">
+                        <i class="fas fa-user text-6xl text-primary"></i>
+                        <div class="absolute top-4 right-4 uid-badge">
+                            ID: ${member.id}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2 text-dark">${member.username || 'Tidak ada username'}</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="font-medium text-gray-700 w-20 flex-shrink-0">Server:</span>
+                                <span class="text-gray-600 break-words">${member.serverName || 'Tidak ada server'}</span>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="font-medium text-gray-700 w-20 flex-shrink-0">UID:</span>
+                                <span class="text-gray-600 break-all font-mono text-sm">${member.uid || 'Tidak ada UID'}</span>
+                            </div>
+                            ${member.noted ? `
+                            <div class="flex items-start">
+                                <span class="font-medium text-gray-700 w-20 flex-shrink-0">Catatan:</span>
+                                <span class="text-gray-600 break-words bg-yellow-50 px-3 py-1 rounded-lg text-sm">${member.noted}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            showMembers();
+        }
+
+        // Function to filter members
+        function filterMembers() {
+            const usernameFilter = document.getElementById('usernameFilter').value.toLowerCase();
+            const uidFilter = document.getElementById('uidFilter').value.toLowerCase();
+            
+            const filteredMembers = membersData.filter(member => {
+                const usernameMatch = member.username ? member.username.toLowerCase().includes(usernameFilter) : false;
+                const uidMatch = member.uid ? member.uid.toLowerCase().includes(uidFilter) : false;
+                
+                return usernameMatch && uidMatch;
+            });
+            
+            renderMembers(filteredMembers);
+        }
+
+        // Function to reset filters
+        function resetFilters() {
+            document.getElementById('usernameFilter').value = '';
+            document.getElementById('uidFilter').value = '';
+            renderMembers(membersData);
+        }
+
+        // Function to load and initialize data
+        async function initializePage() {
+            showLoading();
+            
+            try {
+                const data = await fetchMembersData();
+                membersData = data.members; // Access the members array from your JSON structure
+                renderMembers(membersData);
+                
+                // Add event listeners to filter inputs
+                document.getElementById('usernameFilter').addEventListener('input', filterMembers);
+                document.getElementById('uidFilter').addEventListener('input', filterMembers);
+                document.getElementById('resetFilter').addEventListener('click', resetFilters);
+                
+            } catch (error) {
+                showError();
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize member data
+            initializePage();
+            
+            // Retry button event listener
+            document.getElementById('retryButton').addEventListener('click', initializePage);
+            
+            // Back to top button functionality
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
