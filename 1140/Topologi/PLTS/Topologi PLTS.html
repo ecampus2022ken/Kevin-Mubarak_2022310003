@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Topologi PLTS Rumah — 1000VA (Visual)</title>
+  <style>
+    :root{--bg:#0f172a;--card:#0b1220;--accent:#0ea5a4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#07112a 0%, #081428 100%)}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+    header h1{font-size:20px;margin:0}
+    .card{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+    .topo{display:grid;grid-template-columns:1fr 420px;gap:18px}
+    .left{padding:12px}
+    .right{padding:12px}
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    /* Canvas / Diagram */
+    .diagram{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:10px;padding:18px;min-height:900px;position:relative;overflow:hidden}
+    svg{width:100%;height:100%}
+
+    /* Node styles */
+    .node{fill:#071b2a;stroke:var(--accent);stroke-width:2;rx:8;}
+    .node-text{font-size:16px;fill:#e6eef6}
+    .small{font-size:14px;fill:#cfeef0}
+    .wire{stroke:#9ae6e6;stroke-width:3;stroke-linecap:round}
+    .wire-dashed{stroke-dasharray:8 6;opacity:0.6}
+    .btns{display:flex;gap:8px;margin-top:12px}
+    .btn{background:var(--accent);color:#062024;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    .mutebtn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){.topo{grid-template-columns:1fr;}.diagram{min-height:640px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#065f60,#0fb2b1);display:flex;align-items:center;justify-content:center;font-weight:700;color:white">PLTS</div>
+      <div>
+        <h1>Topologi PLTS Rumah (Mulai seadanya → Upgrade sampai 1000VA)</h1>
+        <div style="color:var(--muted);font-size:13px">Diagram visual menunjukkan alur: Panel → MPPT → Baterai → Inverter → Beban. Lengkap dengan proteksi dasar (MCB/fuse) dan opsi upgrade.</div>
+      </div>
+    </header>
+
+    <div class="card topo">
+      <div class="left">
+        <div class="card" style="margin-bottom:14px">
+          <h3 style="margin:0 0 8px 0">Komponen (singkat)</h3>
+          <div style="color:var(--muted);font-size:14px;line-height:1.6">
+            • Solar Panel (50W + 100W + tambahan 150–200W)
+            <br>•    MPPT PowMr 25A
+            <br>• Baterai (bekas mobil sementara, disarankan 1–2 baterai baru 100Ah untuk final)
+            <br>• Inverter Pure Sine 1000VA (24V lebih efisien)
+            <br>• MCB / DC breaker, ANL fuse, kabel tebal, konektor MC4
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px 0">Urutan instalasi & proteksi</h3>
+          <ol style="color:var(--muted);line-height:1.6">
+            <li>Pasang panel → kabel MC4 → PV breaker</li>
+            <li>PV breaker → MPPT (input)</li>
+            <li>MPPT output → DC breaker/MCB → Baterai (dengan ANL fuse dekat baterai)</li>
+            <li>Baterai → Inverter (dengan fuse & MCB DC) → Beban AC</li>
+            <li>Grounding pada rak panel & negative baterai</li>
+          </ol>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px 0">Catatan singkat</h3>
+          <div style="color:var(--muted);line-height:1.6">
+            • MPPT 25A pada 24V mampu ~600W input panel. Jangan melebihi.
+            <br>• Jika gunakan aki bekas, gunakan hanya sementara dan ukur tegangan & densitas elektrolit.
+            <br>• Gunakan inverter pure sine agar peralatan elektronik aman.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px 0">Detail Spesifikasi Proteksi & Kabel</h3>
+          <div style="color:var(--muted);line-height:1.6;font-size:14px">
+            <strong>MCB / DC Breaker:</strong><br>
+            • Panel → MPPT: 10A–15A DC<br>
+            • MPPT → Baterai: 25A–32A DC<br>
+            • Baterai → Inverter: 50A–63A DC (untuk sistem 24V 1000VA)<br><br>
+            <strong>Fuse (ANL Fuse):</strong><br>
+            • Dekat baterai → inverter: 60A–80A<br>
+            • Dekat baterai → MPPT: 30A<br><br>
+            <strong>Ukuran Kabel:</strong><br>
+            • Panel → MPPT: 4–6 mm² (MC4)<br>
+            • MPPT → Baterai: 10 mm²<br>
+            • Baterai → Inverter 1000VA: 10–16 mm²<br>
+            • Grounding: 6 mm²<br><br>
+            <strong>Konektor & Aksesori:</strong><br>
+            • MC4 Connector + Branch<br>
+            • Lug tembaga untuk terminal baterai<br>
+            • Selang bakar (heatshrink) untuk isolasi<br>
+            • Bracket panel + baut anti karat<br>
+          </div>
+        </div>
+</div>
+      <div class="right">
+        <h3 style="margin:0 0 8px 0">Topologi PLTS</h3>
+        <div class="diagram">
+  <div style="position: relative; width: 100%; height:1000px;">
+    <iframe src="https://app.cirkitdesigner.com/project/76315546-de2f-4a9e-899f-d076e071f2e8?view=interactive_preview" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+  </div>
+</div>
+
+        <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;align-items:center">
+          <div>
+            <button class="btn" onclick="downloadHTML()">Download .html</button>
+            <button class="mutebtn" onclick="printDiagram()">Print / Save PDF</button>
+          </div>
+          <div style="color:var(--muted);font-size:13px">Versi visual: mudah diubah. Jika mau, saya tambahkan detail ukuran kabel & rating MCB.</div>
+        </div>
+
+      
+    </div>
+
+  </div>
+
+  <script>
+    // Create downloadable HTML file from current document
+    function downloadHTML(){
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'topologi_plts_1000VA.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+    function printDiagram(){
+      window.print();
+    }
+  </script>
+</body>
+</html>

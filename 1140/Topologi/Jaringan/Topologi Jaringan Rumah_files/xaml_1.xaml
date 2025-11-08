@@ -1,0 +1,1554 @@
+<Canvas Height="793.7" Name="Workspace" Width="1122.5" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<!-- Page Topologi General -->
+	<Canvas Width="1122.5" Height="793.7" Name="D">
+		<Canvas.Background>
+			<SolidColorBrush Color="#FFFFFFFF"/>
+		</Canvas.Background>
+		<Canvas Tag="_91" Name="_91" RenderTransform="1, 0, 0, 1, 24, -21.355191">
+			<Rectangle Canvas.Left="-0.33333" Canvas.Top="45.022" Height="749.01" Name="_91_G0_P0" Width="658.01"
+					StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+					StrokeStartLineCap="Round">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="#FFFFFFFF"/>
+				</Rectangle.Stroke>
+				<Rectangle.Fill>
+					<SolidColorBrush Color="#FFE0EADC"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="2.8901" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="3.0303" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="3.1899" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="3.3651" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="3.4767" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="3.6364" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 45.355191" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1006" OriginX="3.7882" OriginY="7.6397">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF71AC41"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_90" Name="_90" RenderTransform="1, 0, 0, 1, 695.999986, -24">
+			<Rectangle Canvas.Left="-0.33333" Canvas.Top="228.33" Height="565.71" Name="_90_G0_P0" Width="403.19"
+					StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+					StrokeStartLineCap="Round">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="#FFFFFFFF"/>
+				</Rectangle.Stroke>
+				<Rectangle.Fill>
+					<SolidColorBrush Color="#FFDEE6F3"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="1.5629" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.7031" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.8627" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="2.0379" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="2.1495" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="2.3092" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 228.661398" FontRenderingEmSize="0.33333"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1005" OriginX="2.461" OriginY="0.35556">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF5899D4"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_1" Name="_1" RenderTransform="1, 0, 0, 1, 47.244094, -342.182222">
+			<Canvas Name="_2" RenderTransform="1, 0, 0, 1, 0, -14.981789">
+				<Path Name="_2_G0" Data="F0 M110.35 676.53 L36.78 676.53 L0 698.27 L0 793.7 L147.13 793.7 L147.13 698.27 L110.35 676.53 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+				<Path Name="_2_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+						StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 698.27 L147.13 698.27M110.35 676.53 L36.78 676.53 L0 698.27 L0 793.7 L147.13 793.7 L147.13 698.27 L110.35 676.53">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+				</Path>
+			</Canvas>
+			<Canvas Name="_3" RenderTransform="1, 0, 0, 1, 16.410362, -26.427223">
+				<Path Name="_3_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M92.65 788.08 L84.2 789.81 L90.16 793.7 L101.53 790.82 L99.62 779.29 L93.6 775.36 L95.41 783.73 L75.56 770.76 L72.74 775.08 L92.65 788.08 ZM103.87 754.46 L80.1 754.46 L80.1 759.61 L103.81 759.61 L97.72 765.63 L104.91 765.63 L112.81 757.01 L104.86 748.39 L97.75 748.39 L103.87 754.46 ZM95 727.17 L75.1 740.17 L77.92 744.49 L97.77 731.52 L95.96 739.89 L101.98 735.96 L103.88 724.43 L92.52 721.55 L86.56 725.44 L95 727.17 ZM56.62 737.7 C46.31 737.7 37.96 746.05 37.96 756.36 C37.96 766.66 46.31 775.02 56.62 775.02 C66.93 775.02 75.28 766.66 75.28 756.36 C75.28 746.05 66.93 737.7 56.62 737.7 ZM56.62 743.58 C63.66 743.58 69.39 749.31 69.39 756.36 C69.39 763.4 63.66 769.14 56.62 769.14 C49.58 769.14 43.84 763.4 43.84 756.36 C43.84 749.31 49.58 743.58 56.62 743.58 ZM23.78 753.81 L0 753.81 L0 758.96 L23.71 758.96 L17.62 764.98 L24.81 764.98 L32.72 756.36 L24.77 747.74 L17.65 747.74 L23.78 753.81 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="0.18894" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.32078" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="282" OriginX="0.44053" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="271" OriginX="0.57188" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.70322" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="367" OriginX="0.82298" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.88035" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.0001" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="272" OriginX="1.1314" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="1.2372" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="90" OriginX="1.4181" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1008" OriginX="1.5538" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1011" OriginX="1.6805" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1004" OriginX="1.8072" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="100" OriginX="1.9339" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -35.111725, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1085" OriginX="2.0558" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_4" Name="_4" RenderTransform="1, 0, 0, 1, 47.244094, -608.773893">
+			<Canvas Name="_5" RenderTransform="1, 0, 0, 1, 0, -37.333909">
+				<Path Name="_5_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M136.37 793.7 L139.3 787.84 L9.58 787.84 L12.51 793.7 L136.37 793.7 ZM0 785.16 L147.13 785.16 L147.13 721.24 L0 721.24 L0 785.16 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_6" RenderTransform="1, 0, 0, 1, 96.191708, -59.930382">
+				<Rectangle Canvas.Left="-0.33333" Canvas.Top="756.7" Height="37.33" Name="_6_G0_P0" Width="39.302"
+						StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas Name="_7" RenderTransform="1, 0, 0, 1, 14.424784, -80.958433">
+				<Path Name="_7_G0" Data="F0 M0 788.84 C0 791.53 2.17 793.7 4.87 793.7 C7.56 793.7 9.73 791.52 9.73 788.84 C9.73 786.15 7.56 783.97 4.87 783.97 C2.17 783.97 0 786.15 0 788.84 ZM18.1 788.84 C18.1 791.53 20.29 793.7 22.98 793.7 C25.67 793.7 27.84 791.52 27.84 788.84 C27.84 786.15 25.66 783.97 22.98 783.97 C20.29 783.97 18.1 786.15 18.1 788.84 ZM54.32 788.84 C54.32 791.53 56.49 793.7 59.18 793.7 C61.88 793.7 64.05 791.52 64.05 788.84 C64.05 786.15 61.88 783.97 59.18 783.97 C56.49 783.97 54.32 786.15 54.32 788.84 ZM36.21 788.84 C36.21 791.53 38.39 793.7 41.08 793.7 C43.77 793.7 45.95 791.52 45.95 788.84 C45.95 786.15 43.77 783.97 41.08 783.97 C38.39 783.97 36.21 786.15 36.21 788.84 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_8" RenderTransform="1, 0, 0, 1, 100.239301, -62.463995">
+				<Path Name="_8_G0" Data="F0 M21.05 769.93 L16.79 769.93 L16.79 765.11 A12.9064 12.9064 0 0 1 19.13 765.52 A25.8416 25.8416 0 0 1 21.05 769.93 ZM22.31 776.91 L16.79 776.91 L16.79 772.05 L21.64 772.05 A25.8417 25.8417 0 0 1 22.31 776.91 ZM21.64 783.89 L16.79 783.89 L16.79 779.03 L22.31 779.03 A25.8417 25.8417 0 0 1 21.64 783.89 ZM19.13 790.42 A12.9064 12.9064 0 0 1 16.79 790.83 L16.79 786.01 L21.05 786.01 A25.8417 25.8417 0 0 1 19.13 790.42 ZM22.75 786.01 L25.83 786.01 A12.9064 12.9064 0 0 1 20.16 790.09 A18.9608 18.9608 -180 0 0 22.75 786.01 ZM24.52 779.03 L28.59 779.03 A12.9064 12.9064 0 0 1 27.2 783.89 L23.6 783.89 A18.9608 18.9608 -180 0 0 24.52 779.03 ZM23.6 772.05 L27.2 772.05 A12.9064 12.9064 0 0 1 28.59 776.91 L24.52 776.91 A18.9608 18.9608 -180 0 0 23.6 772.05 ZM20.16 765.85 A12.9064 12.9064 0 0 1 25.83 769.93 L22.75 769.93 A18.9608 18.9608 -180 0 0 20.16 765.85 ZM8.71 769.93 L5.64 769.93 A12.9064 12.9064 0 0 1 11.3 765.85 A18.9608 18.9608 -180 0 0 8.71 769.93 ZM6.95 776.91 L2.87 776.91 A12.9064 12.9064 0 0 1 4.26 772.05 L7.87 772.05 A18.9608 18.9608 -180 0 0 6.95 776.91 ZM7.87 783.89 L4.26 783.89 A12.9064 12.9064 0 0 1 2.87 779.03 L6.95 779.03 A18.9608 18.9608 -180 0 0 7.87 783.89 ZM11.3 790.09 A12.9064 12.9064 0 0 1 5.64 786.01 L8.71 786.01 A18.9608 18.9608 -180 0 0 11.3 790.09 ZM10.42 786.01 L14.67 786.01 L14.67 790.83 A12.9064 12.9064 0 0 1 12.33 790.42 A25.8416 25.8416 0 0 1 10.42 786.01 ZM9.15 779.03 L14.67 779.03 L14.67 783.89 L9.82 783.89 A25.8417 25.8417 0 0 1 9.15 779.03 ZM9.82 772.05 L14.67 772.05 L14.67 776.91 L9.15 776.91 A25.8417 25.8417 0 0 1 9.82 772.05 ZM12.33 765.52 A12.9064 12.9064 0 0 1 14.67 765.11 L14.67 769.93 L10.42 769.93 A25.8417 25.8417 0 0 1 12.33 765.52 ZM31.46 777.97 A15.7313 15.7313 -180 1 0 0 777.97 A15.7313 15.7313 -180 1 0 31.46 777.97 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 50.780853, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="47" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 50.780853, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="94" OriginX="0.14683" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 50.780853, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="87" OriginX="0.2617" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_9" Name="_9" RenderTransform="1, 0, 0, 1, 47.244139, -94.488188">
+			<Canvas Name="_10" RenderTransform="1, 0, 0, 1, 0, -37.333909">
+				<Path Name="_10_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M136.37 793.7 L139.3 787.84 L9.58 787.84 L12.51 793.7 L136.37 793.7 ZM0 785.16 L147.13 785.16 L147.13 721.24 L0 721.24 L0 785.16 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_11" RenderTransform="1, 0, 0, 1, 96.191708, -59.930382">
+				<Rectangle Canvas.Left="-0.33333" Canvas.Top="756.7" Height="37.33" Name="_11_G0_P0" Width="39.302"
+						StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas Name="_12" RenderTransform="1, 0, 0, 1, 14.424784, -80.958433">
+				<Path Name="_12_G0" Data="F0 M0 788.84 C0 791.53 2.17 793.7 4.87 793.7 C7.56 793.7 9.73 791.52 9.73 788.84 C9.73 786.15 7.56 783.97 4.87 783.97 C2.17 783.97 0 786.15 0 788.84 ZM18.1 788.84 C18.1 791.53 20.29 793.7 22.98 793.7 C25.67 793.7 27.84 791.52 27.84 788.84 C27.84 786.15 25.66 783.97 22.98 783.97 C20.29 783.97 18.1 786.15 18.1 788.84 ZM54.32 788.84 C54.32 791.53 56.49 793.7 59.18 793.7 C61.88 793.7 64.05 791.52 64.05 788.84 C64.05 786.15 61.88 783.97 59.18 783.97 C56.49 783.97 54.32 786.15 54.32 788.84 ZM36.21 788.84 C36.21 791.53 38.39 793.7 41.08 793.7 C43.77 793.7 45.95 791.52 45.95 788.84 C45.95 786.15 43.77 783.97 41.08 783.97 C38.39 783.97 36.21 786.15 36.21 788.84 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_13" RenderTransform="1, 0, 0, 1, 100.239301, -62.463995">
+				<Path Name="_13_G0" Data="F0 M21.05 769.93 L16.79 769.93 L16.79 765.11 A12.9064 12.9064 0 0 1 19.13 765.52 A25.8416 25.8416 0 0 1 21.05 769.93 ZM22.31 776.91 L16.79 776.91 L16.79 772.05 L21.64 772.05 A25.8417 25.8417 0 0 1 22.31 776.91 ZM21.64 783.89 L16.79 783.89 L16.79 779.03 L22.31 779.03 A25.8417 25.8417 0 0 1 21.64 783.89 ZM19.13 790.42 A12.9064 12.9064 0 0 1 16.79 790.83 L16.79 786.01 L21.05 786.01 A25.8417 25.8417 0 0 1 19.13 790.42 ZM22.75 786.01 L25.83 786.01 A12.9064 12.9064 0 0 1 20.16 790.09 A18.9608 18.9608 -180 0 0 22.75 786.01 ZM24.52 779.03 L28.59 779.03 A12.9064 12.9064 0 0 1 27.2 783.89 L23.6 783.89 A18.9608 18.9608 -180 0 0 24.52 779.03 ZM23.6 772.05 L27.2 772.05 A12.9064 12.9064 0 0 1 28.59 776.91 L24.52 776.91 A18.9608 18.9608 -180 0 0 23.6 772.05 ZM20.16 765.85 A12.9064 12.9064 0 0 1 25.83 769.93 L22.75 769.93 A18.9608 18.9608 -180 0 0 20.16 765.85 ZM8.71 769.93 L5.64 769.93 A12.9064 12.9064 0 0 1 11.3 765.85 A18.9608 18.9608 -180 0 0 8.71 769.93 ZM6.95 776.91 L2.87 776.91 A12.9064 12.9064 0 0 1 4.26 772.05 L7.87 772.05 A18.9608 18.9608 -180 0 0 6.95 776.91 ZM7.87 783.89 L4.26 783.89 A12.9064 12.9064 0 0 1 2.87 779.03 L6.95 779.03 A18.9608 18.9608 -180 0 0 7.87 783.89 ZM11.3 790.09 A12.9064 12.9064 0 0 1 5.64 786.01 L8.71 786.01 A18.9608 18.9608 -180 0 0 11.3 790.09 ZM10.42 786.01 L14.67 786.01 L14.67 790.83 A12.9064 12.9064 0 0 1 12.33 790.42 A25.8416 25.8416 0 0 1 10.42 786.01 ZM9.15 779.03 L14.67 779.03 L14.67 783.89 L9.82 783.89 A25.8417 25.8417 0 0 1 9.15 779.03 ZM9.82 772.05 L14.67 772.05 L14.67 776.91 L9.15 776.91 A25.8417 25.8417 0 0 1 9.82 772.05 ZM12.33 765.52 A12.9064 12.9064 0 0 1 14.67 765.11 L14.67 769.93 L10.42 769.93 A25.8417 25.8417 0 0 1 12.33 765.52 ZM31.46 777.97 A15.7313 15.7313 -180 1 0 0 777.97 A15.7313 15.7313 -180 1 0 31.46 777.97 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1008" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="39" OriginX="0.21055" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="68" OriginX="0.42478" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="0.63853" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="282" OriginX="0.77036" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="0.90171" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 10.702728, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="373" OriginX="1.0261" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_17" Name="_17" RenderTransform="1, 0, 0, 1, 385.646789, -608.773893">
+			<Canvas Name="_18" RenderTransform="1, 0, 0, 1, 25.074811, -73.056023">
+				<Path Name="_18_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M63.63 756.67 C63.63 761.29 61.54 765.44 58.26 768.22 L60.91 771.36 C65.08 767.82 67.75 762.55 67.75 756.67 C67.75 750.78 65.08 745.5 60.9 741.97 L58.25 745.11 C61.54 747.89 63.63 752.04 63.63 756.67 ZM77.39 756.67 C77.39 765.51 73.39 773.42 67.13 778.72 L69.77 781.87 C76.94 775.81 81.5 766.77 81.5 756.67 C81.5 746.57 76.93 737.52 69.76 731.46 L67.11 734.6 C73.39 739.9 77.39 747.82 77.39 756.67 ZM79.74 719.63 L77.09 722.77 C86.73 730.92 92.87 743.09 92.87 756.67 C92.87 770.24 86.73 782.41 77.1 790.55 L79.75 793.7 C90.28 784.79 96.98 771.5 96.98 756.67 C96.98 741.83 90.28 728.53 79.74 719.63 ZM33.35 756.67 C33.35 752.03 35.45 747.88 38.74 745.1 L36.09 741.96 C31.9 745.49 29.24 750.77 29.24 756.67 C29.24 762.56 31.9 767.83 36.08 771.37 L38.73 768.22 C35.44 765.45 33.35 761.3 33.35 756.67 ZM19.59 756.67 C19.59 747.82 23.59 739.9 29.87 734.6 L27.23 731.46 C20.05 737.52 15.48 746.56 15.48 756.67 C15.48 766.77 20.05 775.81 27.21 781.87 L29.86 778.73 C23.59 773.43 19.59 765.51 19.59 756.67 ZM17.23 793.7 L19.88 790.56 C10.25 782.41 4.11 770.25 4.11 756.67 C4.11 743.09 10.25 730.92 19.9 722.77 L17.24 719.63 C6.71 728.53 0 741.82 0 756.67 C-0 771.5 6.7 784.8 17.23 793.7 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_19" RenderTransform="1, 0, 0, 1, 65.504785, -85.199706">
+				<Path Name="_19_G0" Data="F0 M5.86 776.57 L5.86 793.7 L10.26 793.7 L10.26 776.57 C13.65 775.61 16.12 772.5 16.12 768.81 C16.12 764.36 12.51 760.75 8.06 760.75 C3.61 760.75 0 764.36 0 768.81 C0 772.5 2.48 775.61 5.86 776.57 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FF28669D"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_20" RenderTransform="1, 0, 0, 1, 51.471089, -0">
+				<Path Name="_20_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M44.19 793.7 L0 793.7 L14.25 708.5 L29.94 708.5 L44.19 793.7 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="100" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="393" OriginX="0.20567" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="882" OriginX="0.33701" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="367" OriginX="0.41355" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.47092" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.5283" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="364" OriginX="0.65965" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="24" OriginX="0.82981" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="0.98362" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="272" OriginX="1.108" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="1.2137" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="28" OriginX="1.4021" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1008" OriginX="1.5241" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="0.4672" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.5723" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.69205" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="0.8234" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.90714" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="1.0269" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1006" OriginX="1.1408" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_21" Name="_21" RenderTransform="1, 0, 0, 1, 111.361103, -204.285886">
+			<Path Name="_21_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M9.45 793.7 L9.45 648.88">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_21_G0_line__MrkrEnd" RenderTransform="4.026667, 0, 0, -4.026667, 9.448819, 640.822663" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_22" Name="_22" RenderTransform="1, 0, 0, 1, 111.36108, -646.107802">
+			<Path Name="_22_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M9.45 793.7 L9.45 957.42">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_22_G0_line__MrkrEnd" RenderTransform="-4.026667, 0, 0, 4.026667, 9.448819, 965.476547" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_23" Name="_23" RenderTransform="1, 0, 0, 1, 911.136094, -94.488188">
+			<Canvas Name="_24" RenderTransform="1, 0, 0, 1, 25.074811, -73.056023">
+				<Path Name="_24_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M63.63 756.67 C63.63 761.29 61.54 765.44 58.26 768.22 L60.91 771.36 C65.08 767.82 67.75 762.55 67.75 756.67 C67.75 750.78 65.08 745.5 60.9 741.97 L58.25 745.11 C61.54 747.89 63.63 752.04 63.63 756.67 ZM77.39 756.67 C77.39 765.51 73.39 773.42 67.13 778.72 L69.77 781.87 C76.94 775.81 81.5 766.77 81.5 756.67 C81.5 746.57 76.93 737.52 69.76 731.46 L67.11 734.6 C73.39 739.9 77.39 747.82 77.39 756.67 ZM79.74 719.63 L77.09 722.77 C86.73 730.92 92.87 743.09 92.87 756.67 C92.87 770.24 86.73 782.41 77.1 790.55 L79.75 793.7 C90.28 784.79 96.98 771.5 96.98 756.67 C96.98 741.83 90.28 728.53 79.74 719.63 ZM33.35 756.67 C33.35 752.03 35.45 747.88 38.74 745.1 L36.09 741.96 C31.9 745.49 29.24 750.77 29.24 756.67 C29.24 762.56 31.9 767.83 36.08 771.37 L38.73 768.22 C35.44 765.45 33.35 761.3 33.35 756.67 ZM19.59 756.67 C19.59 747.82 23.59 739.9 29.87 734.6 L27.23 731.46 C20.05 737.52 15.48 746.56 15.48 756.67 C15.48 766.77 20.05 775.81 27.21 781.87 L29.86 778.73 C23.59 773.43 19.59 765.51 19.59 756.67 ZM17.23 793.7 L19.88 790.56 C10.25 782.41 4.11 770.25 4.11 756.67 C4.11 743.09 10.25 730.92 19.9 722.77 L17.24 719.63 C6.71 728.53 0 741.82 0 756.67 C-0 771.5 6.7 784.8 17.23 793.7 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_25" RenderTransform="1, 0, 0, 1, 65.504785, -85.199706">
+				<Path Name="_25_G0" Data="F0 M5.86 776.57 L5.86 793.7 L10.26 793.7 L10.26 776.57 C13.65 775.61 16.12 772.5 16.12 768.81 C16.12 764.36 12.51 760.75 8.06 760.75 C3.61 760.75 0 764.36 0 768.81 C0 772.5 2.48 775.61 5.86 776.57 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FF28669D"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_26" RenderTransform="1, 0, 0, 1, 51.471089, -0">
+				<Path Name="_26_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M44.19 793.7 L0 793.7 L14.25 708.5 L29.94 708.5 L44.19 793.7 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="100" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="393" OriginX="0.20567" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="882" OriginX="0.33701" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="367" OriginX="0.41355" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.47092" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.5283" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="364" OriginX="0.65965" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="24" OriginX="0.82981" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="0.98362" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="272" OriginX="1.108" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="1.2137" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="28" OriginX="1.4021" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1008" OriginX="1.5241" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="0.4672" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.5723" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.69205" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="0.8234" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.90714" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="1.0269" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -9.699616, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1005" OriginX="1.1408" OriginY="0.58058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_35" Name="_35" RenderTransform="1, 0, 0, 1, 911.136094, -319.640038">
+			<Canvas Name="_36" RenderTransform="1, 0, 0, 1, 0, -27.971605">
+				<Path Name="_36_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M147.13 787.33 C147.13 790.85 144.28 793.7 140.77 793.7 L6.36 793.7 C2.85 793.7 0 790.85 0 787.33 L0 708.89 C0 705.37 2.85 702.51 6.36 702.51 L140.77 702.51 C144.28 702.51 147.13 705.37 147.13 708.89 L147.13 787.33 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_37" RenderTransform="1, 0, 0, 1, 45.207885, -40.434784">
+				<Path Name="_37_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M61.36 737.5 L94.77 737.5 L94.77 725.85 L61.36 725.85 L61.36 737.5 ZM28.36 736.9 C12.7 736.9 0 749.61 0 765.3 C0 780.99 12.7 793.7 28.36 793.7 C44.02 793.7 56.72 780.99 56.72 765.3 C56.72 749.61 44.02 736.9 28.36 736.9 Z">
+					<Path.Stroke>
+						<SolidColorBrush/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_38" RenderTransform="1, 0, 0, 1, 53.380855, -48.61832">
+				<Path Name="_38_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M20.19 753.27 C15.54 753.27 11.23 754.86 7.81 757.52 C5.43 759.37 3.49 761.73 2.13 764.45 C0.77 767.17 -0 770.25 0 773.48 C0 778.17 1.61 782.51 4.3 785.95 C6.15 788.31 8.5 790.24 11.21 791.59 C13.92 792.94 16.97 793.7 20.19 793.7 C24.83 793.7 29.13 792.11 32.55 789.46 C34.93 787.61 36.88 785.24 38.24 782.52 C39.6 779.8 40.37 776.72 40.37 773.48 C40.37 768.8 38.76 764.45 36.07 761.02 C34.22 758.66 31.87 756.73 29.16 755.38 C26.46 754.03 23.4 753.27 20.19 753.27 ZM20.19 756.16 C16.21 756.16 12.55 757.52 9.62 759.78 C7.58 761.36 5.9 763.4 4.73 765.73 C3.56 768.06 2.9 770.7 2.9 773.48 C2.9 777.49 4.26 781.18 6.55 784.12 C8.13 786.15 10.16 787.82 12.48 788.98 C14.8 790.15 17.42 790.8 20.19 790.8 C24.15 790.8 27.82 789.46 30.74 787.19 C32.79 785.61 34.47 783.58 35.64 781.24 C36.81 778.9 37.47 776.27 37.47 773.48 C37.47 769.48 36.11 765.78 33.82 762.85 C32.24 760.81 30.21 759.14 27.89 757.98 C25.57 756.82 22.95 756.16 20.19 756.16 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 40.064056, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="18" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 40.064056, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="18" OriginX="0.21714" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 40.064056, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="100" OriginX="0.35044" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 40.064056, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="115" OriginX="0.47227" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_39" Name="_39" RenderTransform="1, 0, 0, 1, 534.209209, -319.640038">
+			<Canvas Name="_40" RenderTransform="1, 0, 0, 1, 0, -39.813813">
+				<Path Name="_40_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M135.43 793.7 L138.37 787.82 L8.03 787.82 L10.98 793.7 L135.43 793.7 ZM0 785.2 L147.13 785.2 L147.13 726.2 L0 726.2 L0 785.2 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_41" RenderTransform="1, 0, 0, 1, 99.977404, -59.324936">
+				<Rectangle Canvas.Left="-0.33333" Canvas.Top="756.53" Height="37.505" Name="_41_G0_P0" Width="39.484"
+						StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FFAAD288"/>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas Name="_42" RenderTransform="1, 0, 0, 1, 21.935853, -74.039569">
+				<Path Name="_42_G0" Data="F0 M10.35 786.15 L0 786.15 L0 791.11 L2.69 791.11 L2.69 793.7 L7.66 793.7 L7.66 791.11 L10.35 791.11 L10.35 786.15 ZM26.98 786.15 L16.63 786.15 L16.63 791.11 L19.32 791.11 L19.32 793.7 L24.29 793.7 L24.29 791.11 L26.98 791.11 L26.98 786.15 ZM43.61 786.15 L33.26 786.15 L33.26 791.11 L35.95 791.11 L35.95 793.7 L40.92 793.7 L40.92 791.11 L43.61 791.11 L43.61 786.15 ZM60.24 786.15 L49.88 786.15 L49.88 791.11 L52.58 791.11 L52.58 793.7 L57.54 793.7 L57.54 791.11 L60.24 791.11 L60.24 786.15 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_43" RenderTransform="1, 0, 0, 1, 102.547793, -61.47453">
+				<Path Name="_43_G0" Data="F0 M28.4 793.7 L33.23 793.7 L33.23 788.87 L28.4 788.87 L28.4 793.7 ZM19.08 793.7 L23.91 793.7 L23.91 788.87 L19.08 788.87 L19.08 793.7 ZM9.76 793.7 L14.59 793.7 L14.59 788.87 L9.76 788.87 L9.76 793.7 ZM0.44 793.7 L5.27 793.7 L5.27 788.87 L0.44 788.87 L0.44 793.7 ZM28.81 767.34 L24.39 767.34 L28.14 771.04 L5.5 771.04 L9.27 767.34 L4.89 767.34 L0 772.64 L4.86 777.95 L9.29 777.95 L5.54 774.21 L28.18 774.21 L24.41 777.95 L28.79 777.95 L33.68 772.64 L28.81 767.34 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="116" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="90" OriginX="0.30625" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1012" OriginX="0.44199" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1008" OriginX="0.5687" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1004" OriginX="0.69541" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 22.333587, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="69" OriginX="0.82212" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_44" Name="_44" RenderTransform="1, 0, 0, 1, 194.375689, -395.028116">
+			<Path Name="_44_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 784.25 L331.78 784.25">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_44_G0_line__MrkrEnd" RenderTransform="0, 4.026667, 4.026667, 0, 339.833519, 784.251969" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_45" Name="_45" RenderTransform="1, 0, 0, 1, 607.775014, -426.95784">
+			<Path Name="_45_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 793.7 L0 538.32 L-108.66 538.32">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_45_G0_line__MrkrEnd" RenderTransform="0, -4.026667, -4.026667, 0, -116.711562, 538.318929" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_46" Name="_46" RenderTransform="1, 0, 0, 1, 604.72443, -359.453851">
+			<Path Name="_46_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 793.7 L0 985.1 L164.56 985.1">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_46_G0_line__MrkrEnd" RenderTransform="0, 4.026667, 4.026667, 0, 172.616388, 985.100646" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_47" Name="_47" RenderTransform="1, 0, 0, 1, 681.340816, -383.757025">
+			<Path Name="_47_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 784.25 L87.95 784.25">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_47_G0_line__MrkrEnd" RenderTransform="0, 4.026667, 4.026667, 0, 96.000003, 784.251969" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF0070C0"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_66" Name="_66" RenderTransform="1, 0, 0, 1, 777.340819, -342.182222">
+			<Canvas Name="_67">
+				<Rectangle Canvas.Left="-0.83333" Canvas.Top="690.82" Height="103.71" Name="_67_G0_P0" Width="39.462"
+						StrokeThickness="1.6667" StrokeDashCap="Square">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FF4A80B0"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FF8DB3DD"/>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas Name="_68" RenderTransform="1, 0, 0, 1, 2.223252, -3.779528">
+				<Rectangle Canvas.Left="-0.83333" Canvas.Top="698.38" Height="96.155" Name="_68_G0_P0" Width="35.015"
+						StrokeThickness="1.6667" StrokeDashCap="Square">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FF4A80B0"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<RadialGradientBrush Center="0,0" GradientOrigin="0,0" RadiusX="1.5" RadiusY="1.5">
+							<RadialGradientBrush.GradientStops>
+								<GradientStop Color="#FFFFFFFF"/>
+								<GradientStop Color="#FFC0C0C0" Offset="1"/>
+							</RadialGradientBrush.GradientStops>
+						</RadialGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="24" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.23765" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.29502" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="282" OriginX="0.42637" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.55772" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.61509" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="336" OriginX="0.74644" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="4" OriginX="0.92063" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.0653" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.1966" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.2804" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="396" OriginX="1.4001" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="1.5438" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.6489" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.7687" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.9" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.9837" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="2.1035" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_69" Name="_69" RenderTransform="1, 0, 0, 1, 777.340819, -117.030371">
+			<Canvas Name="_70">
+				<Rectangle Canvas.Left="-0.83333" Canvas.Top="690.82" Height="103.71" Name="_70_G0_P0" Width="39.462"
+						StrokeThickness="1.6667" StrokeDashCap="Square">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FF4A80B0"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<SolidColorBrush Color="#FF8DB3DD"/>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas Name="_71" RenderTransform="1, 0, 0, 1, 2.223252, -3.779528">
+				<Rectangle Canvas.Left="-0.83333" Canvas.Top="698.38" Height="96.155" Name="_71_G0_P0" Width="35.015"
+						StrokeThickness="1.6667" StrokeDashCap="Square">
+					<Rectangle.Stroke>
+						<SolidColorBrush Color="#FF4A80B0"/>
+					</Rectangle.Stroke>
+					<Rectangle.Fill>
+						<RadialGradientBrush Center="0,0" GradientOrigin="0,0" RadiusX="1.5" RadiusY="1.5">
+							<RadialGradientBrush.GradientStops>
+								<GradientStop Color="#FFFFFFFF"/>
+								<GradientStop Color="#FFC0C0C0" Offset="1"/>
+							</RadialGradientBrush.GradientStops>
+						</RadialGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="24" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.23765" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.29502" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="282" OriginX="0.42637" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.55772" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="0.61509" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="336" OriginX="0.74644" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="4" OriginX="0.92063" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.0653" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.1966" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.2804" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="396" OriginX="1.4001" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="1.5438" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.6489" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.7687" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.9" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.9837" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, -88.848252, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="2.1035" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF31587B"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_79" Name="_79" RenderTransform="1, 0, 0, 1, 290.375704, -635.095603">
+			<Canvas Name="_80" RenderTransform="1, 0, 0, 1, 0, -6.301565">
+				<Path Name="_80_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M64.01 770.5 L64.01 778.47 L68.83 778.47 L73.39 784.18 L94.49 784.18 L94.49 711.82 L64.01 711.82 L64.01 722.2 L77.08 722.2 L77.08 770.5 L64.01 770.5 ZM77.08 722.2 L4.71 722.2 L4.71 770.5 L77.08 770.5 L77.08 722.2 ZM80.98 793.7 L68.83 778.47 L12.15 778.47 L0 793.7 L80.98 793.7 ZM46.85 770.5 L34.13 770.5 L34.13 778.47 L46.85 778.47 L46.85 770.5 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FF5B9BD5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_81" RenderTransform="1, 0, 0, 1, 9.403763, -33.857317">
+				<Path Name="_81_G0" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+						StrokeStartLineCap="Round" Data="F0 M63.09 754.54 L0 754.54 L0 793.7 L63.09 793.7 L63.09 754.54 Z">
+					<Path.Stroke>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Stroke>
+					<Path.Fill>
+						<SolidColorBrush Color="#FFA5A5A5"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas Name="_82" RenderTransform="1, 0, 0, 1, 11.020367, -9.444855">
+				<Path Name="_82_G0" Data="F0 M71.26 723.06 L77.79 723.06 L77.79 720.52 L71.26 720.52 L71.26 723.06 ZM71.26 727.59 L77.79 727.59 L77.79 725.05 L71.26 725.05 L71.26 727.59 ZM55.3 787.8 L51.7 787.8 L53.71 790.03 L57.59 790.03 L55.3 787.8 ZM51.23 783.82 L48.13 783.82 L50.29 786.23 L53.69 786.23 L51.23 783.82 ZM49.76 787.8 L46.16 787.8 L47.74 790.03 L51.62 790.03 L49.76 787.8 ZM46.46 783.82 L43.36 783.82 L45.06 786.23 L48.46 786.23 L46.46 783.82 ZM44.23 787.8 L40.62 787.8 L41.77 790.03 L45.66 790.03 L44.23 787.8 ZM41.7 783.82 L38.6 783.82 L39.84 786.28 L43.25 786.28 L41.7 783.82 ZM38.69 787.8 L35.09 787.8 L35.81 790.03 L39.69 790.03 L38.69 787.8 ZM37 783.99 L33.87 783.99 L34.61 786.28 L38.02 786.28 L37 783.99 ZM33.15 787.8 L29.56 787.8 L29.84 790.03 L33.72 790.03 L33.15 787.8 ZM32.24 784.18 L29.1 784.18 L29.38 786.42 L32.81 786.42 L32.24 784.18 ZM27.4 784.18 L24.26 784.18 L24.11 786.42 L27.54 786.42 L27.4 784.18 ZM27.62 787.8 L24.02 787.8 L23.87 790.03 L27.75 790.03 L27.62 787.8 ZM22.57 784.18 L19.42 784.18 L18.84 786.42 L22.27 786.42 L22.57 784.18 ZM22.08 787.8 L18.48 787.8 L17.9 790.03 L21.78 790.03 L22.08 787.8 ZM41.82 791.46 L16.43 791.46 L15.77 793.7 L42.93 793.7 L41.82 791.46 ZM17.73 784.18 L14.58 784.18 L13.57 786.42 L17 786.42 L17.73 784.18 ZM16.55 787.8 L12.95 787.8 L11.94 790.03 L15.82 790.03 L16.55 787.8 ZM12.89 784.18 L9.75 784.18 L8.3 786.42 L11.73 786.42 L12.89 784.18 ZM11.01 787.8 L7.41 787.8 L5.97 790.03 L9.85 790.03 L11.01 787.8 ZM8.05 784.18 L4.91 784.18 L3.03 786.42 L6.46 786.42 L8.05 784.18 ZM5.48 787.8 L1.88 787.8 L0 790.03 L3.88 790.03 L5.48 787.8 Z">
+					<Path.Fill>
+						<SolidColorBrush Color="#FFFFFFFF"/>
+					</Path.Fill>
+				</Path>
+			</Canvas>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 26.597814, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="87" OriginX="0.083839" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 26.597814, 793.700787" FontRenderingEmSize="0.25"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="18" OriginX="0.21299" OriginY="0.28058">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF1E4A73"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+		<Canvas Tag="_84" Name="_84" RenderTransform="1, 0, 0, 1, 194.375689, -446.895383">
+			<Path Name="_84_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 793.7 L143.24 793.7 L143.24 607.25">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_84_G0_line__MrkrEnd" RenderTransform="4.026667, 0, 0, -4.026667, 143.244109, 599.199002" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_87" Name="_87" RenderTransform="1, 0, 0, 1, 815.136093, -383.757025">
+			<Path Name="_87_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 784.25 L87.95 784.25">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_87_G0_line__MrkrEnd" RenderTransform="0, 4.026667, 4.026667, 0, 96.000001, 784.251969" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_88" Name="_88" RenderTransform="1, 0, 0, 1, 815.136093, -158.605174">
+			<Path Name="_88_G0_line" StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round"
+					StrokeLineJoin="Round" StrokeStartLineCap="Round" Data="F0 M0 784.25 L129.66 784.25">
+				<Path.Stroke>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Stroke>
+			</Path>
+			<Path Name="_88_G0_line__MrkrEnd" RenderTransform="0, 4.026667, 4.026667, 0, 137.712893, 784.251969" Data="M 1 -2 L 0 0 L -1 -2 L 1 -2 ">
+				<Path.Fill>
+					<SolidColorBrush Color="#FF5592C9"/>
+				</Path.Fill>
+			</Path>
+		</Canvas>
+		<Canvas Tag="_92" Name="_92" RenderTransform="1, 0, 0, 1, 728.812889, -681.780269">
+			<Rectangle Canvas.Left="-0.33333" Canvas.Top="719.24" Height="74.792" Name="_92_G0_P0" Width="203.33"
+					StrokeThickness="0.66667" StrokeDashCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+					StrokeStartLineCap="Round">
+				<Rectangle.Stroke>
+					<SolidColorBrush Color="#FF4271C6"/>
+				</Rectangle.Stroke>
+				<Rectangle.Fill>
+					<SolidColorBrush Color="#FFFFFFFF"/>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Canvas>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="94" OriginX="0.21347" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="0.29005" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="373" OriginX="0.37297" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="437" OriginX="0.50611" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.59368" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="393" OriginX="0.71119" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="0.79876" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="449" OriginX="0.88665" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="1.0058" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="396" OriginX="1.0887" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.1845" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="1.2403" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="396" OriginX="1.3233" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="346" OriginX="1.3814" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="437" OriginX="1.4689" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="271" OriginX="1.5565" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="437" OriginX="1.6441" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.7316" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="336" OriginX="1.8192" OriginY="0.33607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="373" OriginX="0.066086" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="286" OriginX="0.19923" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="367" OriginX="0.28215" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="0.3204" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="367" OriginX="0.40024" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="437" OriginX="0.43849" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="0.52605" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="94" OriginX="0.60198" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="0.67856" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="0.73439" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="393" OriginX="0.82228" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="18" OriginX="0.94753" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="381" OriginX="1.0364" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.1243" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.2118" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.2677" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="272" OriginX="1.3475" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.418" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="62" OriginX="1.5115" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.5816" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="374" OriginX="1.6614" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="410" OriginX="1.749" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="258" OriginX="1.8048" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="349" OriginX="1.8846" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+				<Glyphs RenderTransform="96, 0, 0, 96, 0, 719.575554" FontRenderingEmSize="0.16667"
+						FontUri="4E233DCE-1429-2E78-1D66-6608106FF016.odttf" Indices="1006" OriginX="1.9606" OriginY="0.53607">
+					<Glyphs.Fill>
+						<SolidColorBrush Color="#FF4271C5"/>
+					</Glyphs.Fill>
+				</Glyphs>
+			</Canvas>
+		</Canvas>
+	</Canvas>
+</Canvas>

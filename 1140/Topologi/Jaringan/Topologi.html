@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Network Topology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .device-card {
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10; /* Ensure cards are above lines */
+        }
+        .device-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .floor-plan {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-bold mb-2">Home Network Topology</h2>
+            <p class="text-gray-300">Two-story house with dual ISP setup</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Network Diagram</h2>
+            <div class="relative w-full max-w-4xl mx-auto" style="height: 750px;">
+                <svg class="absolute top-0 left-0 w-full h-full z-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                        .line {
+                            stroke: white;
+                            stroke-width: 1.5;
+                        }
+                    </style>
+                    
+                    <line x1="25%" y1="12%" x2="50%" y2="28%" class="line"/>
+                    <line x1="75%" y1="12%" x2="50%" y2="28%" class="line"/>
+                    
+                    <line x1="50%" y1="40%" x2="50%" y2="52%" class="line"/>
+
+                    <line x1="50%" y1="64%" x2="50%" y2="75%" class="line"/>
+                    <line x1="17%" y1="75%" x2="83%" y2="75%" class="line"/>
+
+                    <line x1="17%" y1="75%" x2="17%" y2="82%" class="line"/>
+                    <line x1="83%" y1="75%" x2="83%" y2="82%" class="line"/>
+                    <line x1="50%" y1="75%" x2="50%" y2="92%" class="line"/>
+                </svg>
+
+                <div class="absolute flex flex-col items-center" style="top: 2%; left: 25%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-server text-3xl text-blue-400 mb-2"></i>
+                        <h3 class="font-medium">ISP Router 1</h3>
+                        <p class="text-xs text-gray-400">192.168.0.1</p>
+                        <button onclick="showConfig('isp1')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+                <div class="absolute flex flex-col items-center" style="top: 2%; left: 75%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-server text-3xl text-blue-400 mb-2"></i>
+                        <h3 class="font-medium">ISP Router 2</h3>
+                        <p class="text-xs text-gray-400">192.168.0.2</p>
+                        <button onclick="showConfig('isp2')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+
+                <div class="absolute flex flex-col items-center" style="top: 26%; left: 50%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-network-wired text-3xl text-green-400 mb-2"></i>
+                        <h3 class="font-medium">TP-Link R470T+</h3>
+                        <p class="text-xs text-gray-400">192.168.1.1</p>
+                        <button onclick="showConfig('tplink')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div><br><br><br>
+
+                <div class="absolute flex flex-col items-center" style="top: 50%; left: 50%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-ethernet text-3xl text-purple-400 mb-2"></i>
+                        <h3 class="font-medium">Switch</h3>
+                        <p class="text-xs text-gray-400">192.168.1.2</p>
+                        <button onclick="showConfig('switch')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+
+                <div class="absolute flex flex-col items-center" style="top: 80%; left: 17%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-wifi text-3xl text-yellow-400 mb-2"></i>
+                        <h3 class="font-medium">Deco E4 (L1)</h3>
+                        <p class="text-xs text-gray-400">192.168.1.3</p>
+                        <button onclick="showConfig('deco1')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+                <div class="absolute flex flex-col items-center" style="top: 80%; left: 83%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-wifi text-3xl text-yellow-400 mb-2"></i>
+                        <h3 class="font-medium">Deco E4 (L2)</h3>
+                        <p class="text-xs text-gray-400">192.168.1.4</p>
+                        <button onclick="showConfig('deco2')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+                <div class="absolute flex flex-col items-center" style="top: 90%; left: 50%; transform: translateX(-50%);">
+                    <div class="device-card bg-gray-800 p-4 rounded-lg shadow-lg w-32 text-center">
+                        <i class="fas fa-video text-3xl text-red-400 mb-2"></i>
+                        <h3 class="font-medium">CCTV (L1)</h3>
+                        <p class="text-xs text-gray-400">192.168.1.5</p>
+                        <button onclick="showConfig('cctv')" class="bg-blue-600 hover:bg-blue-700 text-white px-2 py-1 rounded text-xs mt-2 w-full">Configure</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br><br><br>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6 text-center">Floor Plan</h2><br>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                  <div class="floor-plan bg-gray-900 rounded-lg p-6 relative h-96"> <h3 class="text-xl font-medium mb-4">First Floor</h3>
+                    <div class="absolute top-1/4 left-1/4">
+                        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+                            <i class="fas fa-wifi text-2xl text-yellow-400 mb-1"></i>
+                            <h4 class="text-sm font-medium">Deco E4</h4>
+                            <p class="text-xs text-gray-400">192.168.1.3</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-1/4 right-1/4">
+                        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+                            <i class="fas fa-video text-2xl text-red-400 mb-1"></i>
+                            <h4 class="text-sm font-medium">CCTV</h4>
+                            <p class="text-xs text-gray-400">192.168.1.5</p>
+                        </div>
+                    </div>
+                </div>
+                
+  <div class="floor-plan bg-gray-900 rounded-lg p-6 relative h-96"> <h3 class="text-xl font-medium mb-4">Second Floor</h3>
+
+    <div class="absolute top-20 left-8">
+        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+            <i class="fas fa-server text-2xl text-blue-400 mb-1"></i>
+            <h4 class="text-sm font-medium">ISP Router 1</h4>
+            <p class="text-xs text-gray-400">192.168.0.1</p>
+        </div>
+    </div>
+
+    <div class="absolute top-20 right-8">
+        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+            <i class="fas fa-server text-2xl text-blue-400 mb-1"></i>
+            <h4 class="text-sm font-medium">ISP Router 2</h4>
+            <p class="text-xs text-gray-400">192.168.0.2</p>
+        </div>
+    </div>
+    
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+            <i class="fas fa-network-wired text-2xl text-green-400 mb-1"></i>
+            <h4 class="text-sm font-medium">TP-Link R470T+</h4>
+            <p class="text-xs text-gray-400">192.168.1.1</p>
+        </div>
+    </div>
+
+    <div class="absolute bottom-8 left-8">
+        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+            <i class="fas fa-ethernet text-2xl text-purple-400 mb-1"></i>
+            <h4 class="text-sm font-medium">Switch</h4>
+            <p class="text-xs text-gray-400">192.168.1.2</p>
+        </div>
+    </div>
+
+    <div class="absolute bottom-8 right-8">
+        <div class="device-card bg-gray-800 p-3 rounded-lg shadow-lg w-28 text-center">
+            <i class="fas fa-wifi text-2xl text-yellow-400 mb-1"></i>
+            <h4 class="text-sm font-medium">Deco E4</h4>
+            <p class="text-xs text-gray-400">192.168.1.4</p>
+        </div>
+    </div>
+</div>
+                    
+                </div>
+            </div>
+        </section>
+
+    <div id="configModal" class="modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 opacity-0 invisible">
+        <div class="bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modalTitle" class="text-xl font-semibold"></h3>
+                <button onclick="hideConfig()" class="text-gray-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modalContent" class="space-y-4">
+                </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="hideConfig()" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration data for each device (Same as before)
+        const deviceConfigs = {
+            isp1: {
+                title: "ISP Router 1 Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-blue-400">Network Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.0.1</li><li><span class="font-medium">Subnet Mask:</span> 255.255.255.0</li><li><span class="font-medium">Gateway:</span> (Provided by ISP)</li><li><span class="font-medium">Primary DNS:</span> 8.8.8.8</li><li><span class="font-medium">Secondary DNS:</span> 8.8.4.4</li></ul></div><div><h4 class="font-medium text-blue-400">Security</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Firewall:</span> Enabled</li><li><span class="font-medium">NAT:</span> Enabled</li><li><span class="font-medium">Admin Password:</span> ********</li></ul></div></div>`
+            },
+            isp2: {
+                title: "ISP Router 2 Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-blue-400">Network Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.0.2</li><li><span class="font-medium">Subnet Mask:</span> 255.255.255.0</li><li><span class="font-medium">Gateway:</span> (Provided by ISP)</li><li><span class="font-medium">Primary DNS:</span> 1.1.1.1</li><li><span class="font-medium">Secondary DNS:</span> 1.0.0.1</li></ul></div><div><h4 class="font-medium text-blue-400">Security</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Firewall:</span> Enabled</li><li><span class="font-medium">NAT:</span> Enabled</li><li><span class="font-medium">Admin Password:</span> ********</li></ul></div></div>`
+            },
+            tplink: {
+                title: "TP-Link R470T+ Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-green-400">WAN Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">WAN1:</span> 192.168.0.1 (ISP1)</li><li><span class="font-medium">WAN2:</span> 192.168.0.2 (ISP2)</li><li><span class="font-medium">Load Balancing:</span> Ratio 1:1</li><li><span class="font-medium">Failover:</span> Automatic</li></ul></div><div><h4 class="font-medium text-green-400">LAN Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.1.1</li><li><span class="font-medium">Subnet Mask:</span> 255.255.255.0</li><li><span class="font-medium">DHCP:</span> Enabled (192.168.1.100-192.168.1.200)</li><li><span class="font-medium">DNS:</span> 8.8.8.8, 1.1.1.1</li></ul></div><div><h4 class="font-medium text-green-400">QoS Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Bandwidth Control:</span> Enabled</li><li><span class="font-medium">Priority:</span> CCTV > VoIP > Web</li></ul></div></div>`
+            },
+            switch: {
+                title: "Switch Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-purple-400">Basic Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.1.2</li><li><span class="font-medium">Subnet Mask:</span> 255.255.255.0</li><li><span class="font-medium">Gateway:</span> 192.168.1.1</li><li><span class="font-medium">Management VLAN:</span> 1</li></ul></div><div><h4 class="font-medium text-purple-400">Port Configuration</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Port 1:</span> Uplink to R470T+ (1Gbps)</li><li><span class="font-medium">Port 2:</span> Deco E4 (L1)</li><li><span class="font-medium">Port 3:</span> Deco E4 (L2)</li><li><span class="font-medium">Port 4:</span> CCTV</li><li><span class="font-medium">Ports 5-8:</span> Available</li></ul></div></div>`
+            },
+            deco1: {
+                title: "Deco E4 (L1) Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-yellow-400">Network Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.1.3 (DHCP Reserved)</li><li><span class="font-medium">Operation Mode:</span> Access Point</li><li><span class="font-medium">Connection:</span> Wired</li></ul></div><div><h4 class="font-medium text-yellow-400">Wireless Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">SSID:</span> HomeNetwork_2.4G</li><li><span class="font-medium">Band:</span> 2.4GHz</li><li><span class="font-medium">Channel:</span> Auto (Currently 6)</li><li><span class="font-medium">Security:</span> WPA2-PSK (AES)</li><li><span class="font-medium">Password:</span> ********</li></ul></div></div>`
+            },
+            deco2: {
+                title: "Deco E4 (L2) Configuration",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-yellow-400">Network Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.1.4 (DHCP Reserved)</li><li><span class="font-medium">Operation Mode:</span> Access Point</li><li><span class="font-medium">Connection:</span> Wired</li></ul></div><div><h4 class="font-medium text-yellow-400">Wireless Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">SSID:</span> HomeNetwork_2.4G</li><li><span class="font-medium">Band:</span> 2.4GHz</li><li><span class="font-medium">Channel:</span> Auto (Currently 11)</li><li><span class="font-medium">Security:</span> WPA2-PSK (AES)</li><li><span class="font-medium">Password:</span> ********</li></ul></div></div>`
+            },
+            cctv: {
+                title: "CCTV Configuration (L1)",
+                content: `<div class="space-y-4"><div><h4 class="font-medium text-red-400">Network Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">IP Address:</span> 192.168.1.5 (Static)</li><li><span class="font-medium">Subnet Mask:</span> 255.255.255.0</li><li><span class="font-medium">Gateway:</span> 192.168.1.1</li><li><span class="font-medium">DNS:</span> 192.168.1.1</li><li><span class="font-medium">RTSP Port:</span> 554</li></ul></div><div><h4 class="font-medium text-red-400">Camera Settings</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Resolution:</span> 1920x1080 (1080p)</li><li><span class="font-medium">FPS:</span> 30</li><li><span class="font-medium">Bitrate:</span> 4096 Kbps</li><li><span class="font-medium">Storage:</span> 64GB MicroSD</li><li><span class="font-medium">Motion Detection:</span> Enabled</li></ul></div><div><h4 class="font-medium text-red-400">QoS Priority</h4><ul class="text-sm text-gray-300 mt-2 space-y-1"><li><span class="font-medium">Traffic Priority:</span> Highest</li><li><span class="font-medium">Bandwidth Reserved:</span> 4Mbps</li></ul></div></div>`
+            }
+        };
+
+        // Show configuration modal
+        function showConfig(device) {
+            const modal = document.getElementById('configModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            
+            title.textContent = deviceConfigs[device].title;
+            content.innerHTML = deviceConfigs[device].content;
+            
+            modal.classList.remove('opacity-0', 'invisible');
+            modal.classList.add('opacity-100', 'visible');
+        }
+
+        // Hide configuration modal
+        function hideConfig() {
+            const modal = document.getElementById('configModal');
+            modal.classList.remove('opacity-100', 'visible');
+            modal.classList.add('opacity-0', 'invisible');
+        }
+    </script>
+</body>
+</html>
