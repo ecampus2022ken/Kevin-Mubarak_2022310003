@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Mubarak - Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio Kevin Mubarak - Mahasiswa Teknik Informatika & Web Developer">
+    <meta name="keywords" content="web developer, portfolio, teknik informatika, HTML, CSS, JavaScript">
+    <meta property="og:title" content="Kevin Mubarak - Web Developer Portfolio">
+    <meta property="og:description" content="Mahasiswa Teknik Informatika & Web Developer">
+    <meta property="og:image" content="https://kevin-mubarak-2022310003.netlify.app/Kevin_Mubarak_-_S1_Teknik_Informatika_(2)-min%20(1).jpg">
+    <meta property="og:url" content="https://kevin-mubarak-portfolio.netlify.app">
+    <meta name="author" content="Kevin Mubarak">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- PDF.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            width: 5px;
+            background-color: #3B82F6;
+            border-radius: 5px;
+        }
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .pdf-container {
+            height: 500px;
+            overflow-y: auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background-color: #f9fafb;
+        }
+        .pdf-canvas {
+            width: 100%;
+            height: auto;
+        }
+        .pdf-controls {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0.75rem;
+        }
+        .pdf-viewer-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .pdf-viewer-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: white;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 1000px;
+            height: 90vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .modal-header {
+            padding: 1rem;
+            background-color: #3B82F6;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-body {
+            height: calc(100% - 60px);
+            overflow: hidden;
+        }
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: none;
+            color: #6b7280;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-button.active {
+            color: #3B82F6;
+            border-bottom-color: #3B82F6;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md fixed w-full z-20">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">Kevin Mubarak</h1>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="#profile" class="hover:text-blue-600 transition">Profile</a></li>
+                    <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+                    <li><a href="#certifications" class="hover:text-blue-600 transition">Sertifikat</a></li>
+                    <li><a href="#education" class="hover:text-blue-600 transition">Pendidikan</a></li>
+                    <li><a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a></li>
+                    <li><a href="#projects" class="hover:text-blue-600 transition">Proyek</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600 transition">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="md:hidden text-blue-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg hidden z-10">
+            <ul class="flex flex-col p-4 space-y-4">
+                <li><a href="#home" class="block py-2 hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#profile" class="block py-2 hover:text-blue-600 transition">Profile</a></li>
+                <li><a href="#skills" class="block py-2 hover:text-blue-600 transition">Skills</a></li>
+                <li><a href="#certifications" class="block py-2 hover:text-blue-600 transition">Sertifikat</a></li>
+                <li><a href="#education" class="block py-2 hover:text-blue-600 transition">Pendidikan</a></li>
+                <li><a href="#experience" class="block py-2 hover:text-blue-600 transition">Pengalaman</a></li>
+                <li><a href="#projects" class="block py-2 hover:text-blue-600 transition">Proyek</a></li>
+                <li><a href="#contact" class="block py-2 hover:text-blue-600 transition">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Halo, Saya Kevin Mubarak</h2>
+                <p class="text-xl text-gray-600 mb-6">Mahasiswa Teknik Informatika & Web Developer</p>
+                <p class="text-lg text-gray-700 mb-8 max-w-xl">
+                    Saya memiliki pengalaman dalam pengembangan website menggunakan HTML, JavaScript, dan CSS. 
+                    Tertarik dengan teknologi dan terus belajar hal baru termasuk di dunia streaming.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" 
+                       class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center">
+                        <i class="fas fa-code mr-2"></i> Lihat Proyek
+                    </a>
+                    <button id="viewCV" 
+                       class="border border-green-500 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-500 hover:text-white transition flex items-center">
+                        <i class="fas fa-file-pdf mr-2"></i> Lihat CV
+                    </button>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                    <img src="https://kevin-mubarak-2022310003.netlify.app/Kevin_Mubarak_-_S1_Teknik_Informatika_(2)-min%20(1).jpg" 
+                         alt="Kevin Mubarak" 
+                         class="w-full h-full object-cover"
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">PROFILE</h2>
+            <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Saya, Kevin Mubarak, adalah mahasiswa Teknik Informatika dengan pengalaman dalam pengembangan website sederhana menggunakan HTML, JavaScript, dan CSS. Saya memiliki minat yang kuat dalam teknologi dan terus mengembangkan keterampilan saya, termasuk di dunia streaming yang saat ini sedang saya pelajari.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">SKILLS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Illustration Design</h3>
+                    <p class="text-gray-600">Kemampuan dalam membuat desain ilustrasi yang kreatif dan menarik.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Website Design</h3>
+                    <p class="text-gray-600">Mendesain website yang responsif dan user-friendly.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Database Analysis</h3>
+                    <p class="text-gray-600">Analisis dan perancangan database untuk aplikasi web.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">Pengembangan website menggunakan HTML, CSS, dan JavaScript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">SERTIFIKAT</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-certificate text-blue-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">AI Basic: Overview of AI</h3>
+                            <p class="text-gray-600">Huawei</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Sertifikat dasar-dasar Artificial Intelligence dari Huawei.</p>
+                    <p class="text-gray-500 text-sm">Tahun: 2024</p>
+                    <button onclick="openPDFViewer('huawei')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
+                        <i class="fas fa-eye mr-1"></i> Lihat Sertifikat
+                    </button>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-start mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-users text-blue-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Dewan Perwakilan Mahasiswa</h3>
+                            <p class="text-gray-600">Komisi III - Aspirasi & Advokasi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Sertifikat keanggotaan di Dewan Perwakilan Mahasiswa.</p>
+                    <p class="text-gray-500 text-sm">Tahun: 2025</p>
+                    <button onclick="openPDFViewer('dpm')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
+                        <i class="fas fa-eye mr-1"></i> Lihat Sertifikat
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">PENDIDIKAN</h2>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-blue-600 text-white p-4 rounded-xl mr-6">
+                            <i class="fas fa-university text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Mahasiswa Teknik Informatika</h3>
+                            <p class="text-lg text-gray-700 font-medium">Sedang Menempuh Pendidikan</p>
+                            <p class="text-gray-500">2022 - Sekarang</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-blue-700 text-white p-4 rounded-xl mr-6">
+                            <i class="fas fa-school text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Membuat Database SQL</h3>
+                            <p class="text-lg text-gray-700 font-medium">SMK Taruna Bangsa</p>
+                            <p class="text-gray-500">2020-2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-start">
+                        <div class="bg-green-500 text-white p-4 rounded-xl mr-6">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Memahami Bahasa Pemrograman</h3>
+                            <p class="text-lg text-gray-700 font-medium">SMK Taruna Bangsa</p>
+                            <p class="text-gray-500">2019-2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">PENGALAMAN KERJA</h2>
+            <div class="space-y-6 max-w-3xl mx-auto">
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Dewan Perwakilan Mahasiswa - Komisi III</h3>
+                            <p class="text-lg text-gray-700 font-medium">Aspirasi & Advokasi</p>
+                        </div>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full font-medium mt-2 md:mt-0">2023 - 2025</span>
+                    </div>
+                    <p class="text-gray-600">Bertanggung jawab menampung dan menyalurkan aspirasi mahasiswa serta melakukan advokasi.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-blue-600">Desain Grafis</h3>
+                            <p class="text-lg text-gray-700 font-medium">Membuat banner dan poster menggunakan Canva</p>
+                        </div>
+                        <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full font-medium mt-2 md:mt-0">Oktober 2021 - Desember 2021</span>
+                    </div>
+                    <p class="text-gray-600">Membuat berbagai materi desain grafis untuk kebutuhan promosi dan informasi.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 section-title">PROYEK SAYA</h2>
+            
+            <!-- Project Campus -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-6">Proyek Kampus</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center">
+                            <i class="fas fa-box-open text-6xl text-blue-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Smart Box Packet</h4>
+                            <p class="text-gray-600 mb-4">Website untuk manajemen paket pintar.</p>
+                            <a href="https://smart-box-packet.netlify.app/" target="_blank" class="text-blue-600 font-medium hover:underline flex items-center">
+                                Kunjungi Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-green-100 to-teal-100 flex items-center justify-center">
+                            <i class="fas fa-hands-wash text-6xl text-blue-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Smart Hand Wash</h4>
+                            <p class="text-gray-600 mb-4">Website untuk sistem cuci tangan pintar.</p>
+                            <a href="https://smart-handwash.netlify.app/" target="_blank" class="text-blue-600 font-medium hover:underline flex items-center">
+                                Kunjungi Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-yellow-100 to-amber-100 flex items-center justify-center">
+                            <i class="fas fa-leaf text-6xl text-blue-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Diagnosa Penyakit Sayur</h4>
+                            <p class="text-gray-600 mb-4">Website untuk diagnosa penyakit pada tanaman sayur.</p>
+                            <a href="https://penyakit-tanaman.netlify.app/" target="_blank" class="text-blue-600 font-medium hover:underline flex items-center">
+                                Kunjungi Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Personal -->
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-600 mb-6">Proyek Personal</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="h-48 bg-gradient-to-r from-purple-100 to-pink-100 flex items-center justify-center">
+                            <i class="fab fa-discord text-6xl text-blue-600"></i>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2">Website Komunitas Discord</h4>
+                            <p class="text-gray-600 mb-4">Website untuk komunitas Discord.</p>
+                            <a href="https://cdb-official.netlify.app/" target="_blank" class="text-blue-600 font-medium hover:underline flex items-center">
+                                Kunjungi Website <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Viewer Section -->
+    <section id="pdfSection" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">CV & SERTIFIKAT</h2>
+            
+            <!-- PDF Tabs -->
+            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+                <!-- Tab Navigation -->
+                <div class="flex border-b border-gray-200">
+                    <button class="tab-button active" data-tab="cv">
+                        <i class="fas fa-file-pdf mr-2"></i> Curriculum Vitae
+                    </button>
+                    <button class="tab-button" data-tab="huawei">
+                        <i class="fas fa-certificate mr-2"></i> Sertifikat Huawei
+                    </button>
+                    <button class="tab-button" data-tab="dpm">
+                        <i class="fas fa-users mr-2"></i> Sertifikat DPM
+                    </button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="p-4">
+                    <!-- CV Tab -->
+                    <div id="cv" class="tab-content active">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Curriculum Vitae (CV)</h3>
+                            <p class="text-gray-600 mb-4">CV lengkap Kevin Mubarak dalam format PDF</p>
+                        </div>
+                        
+                        <!-- PDF Preview -->
+                        <div class="pdf-container" id="cv-preview">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="text-center">
+                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-500">CV sedang dimuat...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Halaman: <span id="cv-page-num">1</span> / <span id="cv-page-count">-</span></p>
+                            </div>
+                            <div class="space-x-2">
+                                <button onclick="changePage('cv', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    <i class="fas fa-chevron-left"></i> Sebelumnya
+                                </button>
+                                <button onclick="changePage('cv', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    Selanjutnya <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <button onclick="downloadPDF('cv')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                                    <i class="fas fa-download mr-2"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Huawei Certificate Tab -->
+                    <div id="huawei" class="tab-content">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Sertifikat Huawei - AI Basic</h3>
+                            <p class="text-gray-600 mb-4">AI Basic: Overview of AI (2024)</p>
+                        </div>
+                        
+                        <div class="pdf-container" id="huawei-preview">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="text-center">
+                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-500">Sertifikat sedang dimuat...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Halaman: <span id="huawei-page-num">1</span> / <span id="huawei-page-count">-</span></p>
+                            </div>
+                            <div class="space-x-2">
+                                <button onclick="changePage('huawei', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    <i class="fas fa-chevron-left"></i> Sebelumnya
+                                </button>
+                                <button onclick="changePage('huawei', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    Selanjutnya <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <button onclick="downloadPDF('huawei')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                                    <i class="fas fa-download mr-2"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DPM Certificate Tab -->
+                    <div id="dpm" class="tab-content">
+                        <div class="mb-4">
+                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Sertifikat Dewan Perwakilan Mahasiswa</h3>
+                            <p class="text-gray-600 mb-4">DPM - Komisi III (2025)</p>
+                        </div>
+                        
+                        <div class="pdf-container" id="dpm-preview">
+                            <div class="flex items-center justify-center h-full">
+                                <div class="text-center">
+                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
+                                    <p class="text-gray-500">Sertifikat sedang dimuat...</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center mt-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Halaman: <span id="dpm-page-num">1</span> / <span id="dpm-page-count">-</span></p>
+                            </div>
+                            <div class="space-x-2">
+                                <button onclick="changePage('dpm', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    <i class="fas fa-chevron-left"></i> Sebelumnya
+                                </button>
+                                <button onclick="changePage('dpm', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                                    Selanjutnya <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <button onclick="downloadPDF('dpm')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                                    <i class="fas fa-download mr-2"></i> Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">KONTAK</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xl mb-6 text-center">Silakan hubungi saya melalui kontak di bawah ini:</p>
+                <div class="space-y-4 bg-white/10 p-8 rounded-xl">
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-phone text-blue-600 text-xl"></i>
+                        </div>
+                        <a href="https://wa.me/+6281282012692" class="hover:underline">
+                            <p class="text-lg">0812-8201-2692</p>
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-white p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                        </div>
+                        <a href="mailto:kevinmubarok.rp13.2019@gmail.com" class="hover:underline">
+                            <p class="text-lg">kevinmubarok.rp13.2019@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Kevin Mubarak. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden hover:bg-blue-700 transition">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="pdf-viewer-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle" class="text-lg font-semibold">PDF Viewer</h3>
+                <button onclick="closePDFViewer()" class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="pdfFrame" class="w-full h-full" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                mobileMenuButton.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+                
+                // Load PDF if not already loaded
+                if (tabId === 'cv' && !cvPDF) {
+                    loadPDF('cv', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/CV_Kevin_Mubarak.pdf');
+                } else if (tabId === 'huawei' && !huaweiPDF) {
+                    loadPDF('huawei', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf');
+                } else if (tabId === 'dpm' && !dpmPDF) {
+                    loadPDF('dpm', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf');
+                }
+            });
+        });
+
+        // PDF handling variables
+        let cvPDF = null;
+        let huaweiPDF = null;
+        let dpmPDF = null;
+        let currentPDF = null;
+        let currentPageNum = 1;
+        let currentScale = 1.0;
+
+        // PDF URLs (you need to replace these with your actual PDF URLs)
+        const pdfUrls = {
+            cv: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/CV_Kevin_Mubarak.pdf',
+            huawei: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf',
+            dpm: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf'
+        };
+
+        // Load PDF function
+        async function loadPDF(type, url) {
+            try {
+                const loadingTask = pdfjsLib.getDocument(url);
+                const pdf = await loadingTask.promise;
+                
+                if (type === 'cv') cvPDF = pdf;
+                else if (type === 'huawei') huaweiPDF = pdf;
+                else if (type === 'dpm') dpmPDF = pdf;
+                
+                currentPDF = pdf;
+                currentPageNum = 1;
+                
+                // Update page count
+                document.getElementById(`${type}-page-count`).textContent = pdf.numPages;
+                
+                // Render first page
+                await renderPage(type, 1);
+            } catch (error) {
+                console.error('Error loading PDF:', error);
+                const container = document.getElementById(`${type}-preview`);
+                container.innerHTML = `
+                    <div class="flex items-center justify-center h-full">
+                        <div class="text-center">
+                            <i class="fas fa-exclamation-triangle text-6xl text-red-400 mb-4"></i>
+                            <p class="text-gray-500">Gagal memuat PDF</p>
+                            <button onclick="openPDFViewer('${type}')" class="mt-4 text-blue-600 hover:underline">
+                                Buka di tab baru
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Render PDF page
+        async function renderPage(type, pageNum) {
+            if (!currentPDF) return;
+            
+            if (pageNum < 1 || pageNum > currentPDF.numPages) return;
+            
+            currentPageNum = pageNum;
+            
+            const container = document.getElementById(`${type}-preview`);
+            const canvas = document.createElement('canvas');
+            canvas.className = 'pdf-canvas';
+            
+            container.innerHTML = '';
+            container.appendChild(canvas);
+            
+            const page = await currentPDF.getPage(pageNum);
+            const viewport = page.getViewport({ scale: 1.5 });
+            
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+            
+            const context = canvas.getContext('2d');
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            
+            await page.render(renderContext).promise;
+            
+            // Update page number display
+            document.getElementById(`${type}-page-num`).textContent = pageNum;
+        }
+
+        // Change page
+        function changePage(type, direction) {
+            const newPageNum = currentPageNum + direction;
+            
+            // Get correct PDF based on type
+            if (type === 'cv') currentPDF = cvPDF;
+            else if (type === 'huawei') currentPDF = huaweiPDF;
+            else if (type === 'dpm') currentPDF = dpmPDF;
+            
+            if (currentPDF && newPageNum >= 1 && newPageNum <= currentPDF.numPages) {
+                renderPage(type, newPageNum);
+            }
+        }
+
+        // Download PDF
+        function downloadPDF(type) {
+            const url = pdfUrls[type];
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${type}_certificate.pdf`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Open PDF in modal
+        function openPDFViewer(type) {
+            const modal = document.getElementById('pdfModal');
+            const frame = document.getElementById('pdfFrame');
+            const title = document.getElementById('modalTitle');
+            
+            let url = '';
+            let titleText = '';
+            
+            if (type === 'huawei') {
+                url = pdfUrls.huawei;
+                titleText = 'Sertifikat Huawei - AI Basic';
+            } else if (type === 'dpm') {
+                url = pdfUrls.dpm;
+                titleText = 'Sertifikat Dewan Perwakilan Mahasiswa';
+            } else {
+                url = pdfUrls.cv;
+                titleText = 'Curriculum Vitae - Kevin Mubarak';
+            }
+            
+            frame.src = url;
+            title.textContent = titleText;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close PDF modal
+        function closePDFViewer() {
+            const modal = document.getElementById('pdfModal');
+            const frame = document.getElementById('pdfFrame');
+            
+            modal.classList.remove('active');
+            frame.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // View CV button
+        document.getElementById('viewCV').addEventListener('click', () => {
+            // Scroll to PDF section and open CV tab
+            document.getElementById('pdfSection').scrollIntoView({ behavior: 'smooth' });
+            
+            // Activate CV tab
+            setTimeout(() => {
+                document.querySelector('[data-tab="cv"]').click();
+                
+                // Load CV PDF if not loaded
+                if (!cvPDF) {
+                    loadPDF('cv', pdfUrls.cv);
+                }
+            }, 500);
+        });
+
+        // Initialize first tab (CV)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load CV PDF initially
+            loadPDF('cv', pdfUrls.cv);
+            
+            // Add hover effects to project cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDFViewer();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDFViewer();
+            }
+        });
+    </script>
+</body>
+</html>
