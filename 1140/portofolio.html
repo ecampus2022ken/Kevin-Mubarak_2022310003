@@ -14,8 +14,6 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- PDF.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         body {
@@ -44,69 +42,17 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-        .pdf-container {
-            height: 500px;
-            overflow-y: auto;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
+        .pdf-preview {
             background-color: #f9fafb;
-        }
-        .pdf-canvas {
-            width: 100%;
-            height: auto;
-        }
-        .pdf-controls {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 0.75rem;
-        }
-        .pdf-viewer-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .pdf-viewer-modal.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            background-color: white;
+            border: 2px dashed #d1d5db;
             border-radius: 0.75rem;
-            width: 90%;
-            max-width: 1000px;
-            height: 90vh;
-            overflow: hidden;
-            position: relative;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
         }
-        .modal-header {
-            padding: 1rem;
-            background-color: #3B82F6;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .modal-body {
-            height: calc(100% - 60px);
-            overflow: hidden;
-        }
-        .close-modal {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.25rem;
+        .pdf-preview:hover {
+            border-color: #3B82F6;
+            background-color: #f0f9ff;
         }
         .tab-button {
             padding: 0.75rem 1.5rem;
@@ -116,6 +62,10 @@
             cursor: pointer;
             font-weight: 500;
             border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .tab-button:hover {
+            color: #3B82F6;
         }
         .tab-button.active {
             color: #3B82F6;
@@ -123,9 +73,14 @@
         }
         .tab-content {
             display: none;
+            animation: fadeIn 0.5s ease;
         }
         .tab-content.active {
             display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -184,10 +139,10 @@
                        class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition flex items-center">
                         <i class="fas fa-code mr-2"></i> Lihat Proyek
                     </a>
-                    <button id="viewCV" 
+                    <a href="#pdfSection" 
                        class="border border-green-500 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-500 hover:text-white transition flex items-center">
-                        <i class="fas fa-file-pdf mr-2"></i> Lihat CV
-                    </button>
+                        <i class="fas fa-file-pdf mr-2"></i> Lihat CV & Sertifikat
+                    </a>
                 </div>
             </div>
             
@@ -269,7 +224,7 @@
                     </div>
                     <p class="text-gray-700 mb-4">Sertifikat dasar-dasar Artificial Intelligence dari Huawei.</p>
                     <p class="text-gray-500 text-sm">Tahun: 2024</p>
-                    <button onclick="openPDFViewer('huawei')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
+                    <button onclick="openPDF('huawei')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
                         <i class="fas fa-eye mr-1"></i> Lihat Sertifikat
                     </button>
                 </div>
@@ -286,7 +241,7 @@
                     </div>
                     <p class="text-gray-700 mb-4">Sertifikat keanggotaan di Dewan Perwakilan Mahasiswa.</p>
                     <p class="text-gray-500 text-sm">Tahun: 2025</p>
-                    <button onclick="openPDFViewer('dpm')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
+                    <button onclick="openPDF('dpm')" class="text-blue-600 text-sm font-medium mt-3 inline-block hover:underline">
                         <i class="fas fa-eye mr-1"></i> Lihat Sertifikat
                     </button>
                 </div>
@@ -445,128 +400,64 @@
         </div>
     </section>
 
-    <!-- PDF Viewer Section -->
+    <!-- PDF Viewer Section - SIMPLE VERSION -->
     <section id="pdfSection" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 section-title">CV & SERTIFIKAT</h2>
             
-            <!-- PDF Tabs -->
-            <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
-                <!-- Tab Navigation -->
-                <div class="flex border-b border-gray-200">
-                    <button class="tab-button active" data-tab="cv">
-                        <i class="fas fa-file-pdf mr-2"></i> Curriculum Vitae
-                    </button>
-                    <button class="tab-button" data-tab="huawei">
-                        <i class="fas fa-certificate mr-2"></i> Sertifikat Huawei
-                    </button>
-                    <button class="tab-button" data-tab="dpm">
-                        <i class="fas fa-users mr-2"></i> Sertifikat DPM
-                    </button>
+            <!-- Simple PDF Preview -->
+            <div class="bg-gray-50 rounded-xl shadow-md p-6">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Curriculum Vitae & Sertifikat</h3>
+                    <p class="text-gray-600 mb-6">Berikut adalah CV dan sertifikat saya yang dapat dilihat langsung di browser:</p>
                 </div>
                 
-                <!-- Tab Content -->
-                <div class="p-4">
-                    <!-- CV Tab -->
-                    <div id="cv" class="tab-content active">
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Curriculum Vitae (CV)</h3>
-                            <p class="text-gray-600 mb-4">CV lengkap Kevin Mubarak dalam format PDF</p>
-                        </div>
-                        
-                        <!-- PDF Preview -->
-                        <div class="pdf-container" id="cv-preview">
-                            <div class="flex items-center justify-center h-full">
-                                <div class="text-center">
-                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
-                                    <p class="text-gray-500">CV sedang dimuat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mt-4">
-                            <div>
-                                <p class="text-sm text-gray-500">Halaman: <span id="cv-page-num">1</span> / <span id="cv-page-count">-</span></p>
-                            </div>
-                            <div class="space-x-2">
-                                <button onclick="changePage('cv', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    <i class="fas fa-chevron-left"></i> Sebelumnya
-                                </button>
-                                <button onclick="changePage('cv', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    Selanjutnya <i class="fas fa-chevron-right"></i>
-                                </button>
-                                <button onclick="downloadPDF('cv')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-                                    <i class="fas fa-download mr-2"></i> Download
-                                </button>
-                            </div>
+                <!-- PDF Embed Container -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-4 text-gray-800">Curriculum Vitae (CV)</h4>
+                    <div class="pdf-preview mb-4">
+                        <i class="fas fa-file-pdf text-5xl text-red-500 mb-4"></i>
+                        <h5 class="text-lg font-semibold mb-2 text-gray-800">CV Kevin Mubarak</h5>
+                        <p class="text-gray-600 mb-4">Curriculum Vitae lengkap dalam format PDF</p>
+                        <button onclick="showPDF('cv')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition">
+                            <i class="fas fa-eye mr-2"></i> Lihat CV
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Certificates -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="pdf-preview">
+                        <i class="fas fa-certificate text-5xl text-blue-500 mb-4"></i>
+                        <h5 class="text-lg font-semibold mb-2 text-gray-800">Sertifikat Huawei</h5>
+                        <p class="text-gray-600 mb-2">AI Basic: Overview of AI (2024)</p>
+                        <p class="text-gray-500 text-sm mb-4">Sertifikat dari Huawei</p>
+                        <div class="flex gap-2 justify-center">
+                            <button onclick="showPDF('huawei')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                                <i class="fas fa-eye mr-1"></i> Lihat
+                            </button>
+                            <a href="https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf" 
+                               target="_blank"
+                               class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                <i class="fas fa-external-link-alt mr-1"></i> Buka
+                            </a>
                         </div>
                     </div>
                     
-                    <!-- Huawei Certificate Tab -->
-                    <div id="huawei" class="tab-content">
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Sertifikat Huawei - AI Basic</h3>
-                            <p class="text-gray-600 mb-4">AI Basic: Overview of AI (2024)</p>
-                        </div>
-                        
-                        <div class="pdf-container" id="huawei-preview">
-                            <div class="flex items-center justify-center h-full">
-                                <div class="text-center">
-                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
-                                    <p class="text-gray-500">Sertifikat sedang dimuat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mt-4">
-                            <div>
-                                <p class="text-sm text-gray-500">Halaman: <span id="huawei-page-num">1</span> / <span id="huawei-page-count">-</span></p>
-                            </div>
-                            <div class="space-x-2">
-                                <button onclick="changePage('huawei', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    <i class="fas fa-chevron-left"></i> Sebelumnya
-                                </button>
-                                <button onclick="changePage('huawei', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    Selanjutnya <i class="fas fa-chevron-right"></i>
-                                </button>
-                                <button onclick="downloadPDF('huawei')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-                                    <i class="fas fa-download mr-2"></i> Download
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- DPM Certificate Tab -->
-                    <div id="dpm" class="tab-content">
-                        <div class="mb-4">
-                            <h3 class="text-xl font-semibold text-blue-600 mb-2">Sertifikat Dewan Perwakilan Mahasiswa</h3>
-                            <p class="text-gray-600 mb-4">DPM - Komisi III (2025)</p>
-                        </div>
-                        
-                        <div class="pdf-container" id="dpm-preview">
-                            <div class="flex items-center justify-center h-full">
-                                <div class="text-center">
-                                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
-                                    <p class="text-gray-500">Sertifikat sedang dimuat...</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex justify-between items-center mt-4">
-                            <div>
-                                <p class="text-sm text-gray-500">Halaman: <span id="dpm-page-num">1</span> / <span id="dpm-page-count">-</span></p>
-                            </div>
-                            <div class="space-x-2">
-                                <button onclick="changePage('dpm', -1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    <i class="fas fa-chevron-left"></i> Sebelumnya
-                                </button>
-                                <button onclick="changePage('dpm', 1)" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
-                                    Selanjutnya <i class="fas fa-chevron-right"></i>
-                                </button>
-                                <button onclick="downloadPDF('dpm')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
-                                    <i class="fas fa-download mr-2"></i> Download
-                                </button>
-                            </div>
+                    <div class="pdf-preview">
+                        <i class="fas fa-users text-5xl text-green-500 mb-4"></i>
+                        <h5 class="text-lg font-semibold mb-2 text-gray-800">Sertifikat DPM</h5>
+                        <p class="text-gray-600 mb-2">Dewan Perwakilan Mahasiswa (2025)</p>
+                        <p class="text-gray-500 text-sm mb-4">Komisi III - Aspirasi & Advokasi</p>
+                        <div class="flex gap-2 justify-center">
+                            <button onclick="showPDF('dpm')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                                <i class="fas fa-eye mr-1"></i> Lihat
+                            </button>
+                            <a href="https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf" 
+                               target="_blank"
+                               class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition">
+                                <i class="fas fa-external-link-alt mr-1"></i> Buka
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -614,17 +505,36 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- PDF Viewer Modal -->
-    <div id="pdfModal" class="pdf-viewer-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle" class="text-lg font-semibold">PDF Viewer</h3>
-                <button onclick="closePDFViewer()" class="close-modal">
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
+            <div class="flex justify-between items-center bg-blue-600 text-white p-4">
+                <h3 id="pdfTitle" class="text-lg font-semibold">PDF Viewer</h3>
+                <button onclick="closePDFModal()" class="text-white hover:text-gray-200 text-xl">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <div class="modal-body">
-                <iframe id="pdfFrame" class="w-full h-full" frameborder="0"></iframe>
+            <div class="p-4">
+                <div class="mb-4 flex justify-between items-center">
+                    <div>
+                        <p class="text-sm text-gray-600">PDF sedang dimuat...</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="downloadCurrentPDF()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                            <i class="fas fa-download mr-1"></i> Download
+                        </button>
+                    </div>
+                </div>
+                <div id="pdfEmbedContainer" class="h-[70vh] overflow-auto border border-gray-300 rounded-lg bg-gray-100 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
+                        <p class="text-gray-600 mb-4">Memuat PDF...</p>
+                        <div class="animate-pulse flex space-x-4">
+                            <div class="h-2 bg-gray-300 rounded w-20"></div>
+                            <div class="h-2 bg-gray-300 rounded w-24"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -670,195 +580,137 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Tab functionality
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const tabId = button.getAttribute('data-tab');
-                
-                // Remove active class from all buttons and contents
-                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding content
-                button.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
-                
-                // Load PDF if not already loaded
-                if (tabId === 'cv' && !cvPDF) {
-                    loadPDF('cv', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/CV_Kevin_Mubarak.pdf');
-                } else if (tabId === 'huawei' && !huaweiPDF) {
-                    loadPDF('huawei', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf');
-                } else if (tabId === 'dpm' && !dpmPDF) {
-                    loadPDF('dpm', 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf');
-                }
-            });
-        });
-
-        // PDF handling variables
-        let cvPDF = null;
-        let huaweiPDF = null;
-        let dpmPDF = null;
-        let currentPDF = null;
-        let currentPageNum = 1;
-        let currentScale = 1.0;
-
-        // PDF URLs (you need to replace these with your actual PDF URLs)
-        const pdfUrls = {
-            cv: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/CV_Kevin_Mubarak.pdf',
-            huawei: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf',
-            dpm: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf'
+        // PDF Modal Functions
+        let currentPDFType = '';
+        const pdfData = {
+            huawei: {
+                title: 'Sertifikat Huawei - AI Basic: Overview of AI (2024)',
+                url: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[AI%20Basics%20Overview%20of%20AI].pdf'
+            },
+            dpm: {
+                title: 'Sertifikat Dewan Perwakilan Mahasiswa - Komisi III (2025)',
+                url: 'https://kevin-mubarak-2022310003.netlify.app/1140/Sertif/Kevin%20Mubarak%20[DPM%20-%20Komisi%203].pdf'
+            },
+            cv: {
+                title: 'Curriculum Vitae - Kevin Mubarak',
+                url: 'cv-kevin-mubarak.pdf' // This would be your actual CV URL
+            }
         };
 
-        // Load PDF function
-        async function loadPDF(type, url) {
-            try {
-                const loadingTask = pdfjsLib.getDocument(url);
-                const pdf = await loadingTask.promise;
-                
-                if (type === 'cv') cvPDF = pdf;
-                else if (type === 'huawei') huaweiPDF = pdf;
-                else if (type === 'dpm') dpmPDF = pdf;
-                
-                currentPDF = pdf;
-                currentPageNum = 1;
-                
-                // Update page count
-                document.getElementById(`${type}-page-count`).textContent = pdf.numPages;
-                
-                // Render first page
-                await renderPage(type, 1);
-            } catch (error) {
-                console.error('Error loading PDF:', error);
-                const container = document.getElementById(`${type}-preview`);
+        function showPDF(type) {
+            currentPDFType = type;
+            const modal = document.getElementById('pdfModal');
+            const title = document.getElementById('pdfTitle');
+            const container = document.getElementById('pdfEmbedContainer');
+            
+            // Set title
+            title.textContent = pdfData[type].title;
+            
+            // Show loading state
+            container.innerHTML = `
+                <div class="text-center p-8">
+                    <i class="fas fa-file-pdf text-6xl text-gray-400 mb-4"></i>
+                    <p class="text-gray-600 mb-4">Memuat PDF...</p>
+                    <div class="animate-pulse flex space-x-4 justify-center">
+                        <div class="h-2 bg-gray-300 rounded w-20"></div>
+                        <div class="h-2 bg-gray-300 rounded w-24"></div>
+                    </div>
+                </div>
+            `;
+            
+            // Show modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Load PDF after a short delay to show loading state
+            setTimeout(() => {
+                loadPDFEmbed(type);
+            }, 500);
+        }
+
+        function loadPDFEmbed(type) {
+            const container = document.getElementById('pdfEmbedContainer');
+            const url = pdfData[type].url;
+            
+            // Create iframe for PDF
+            const iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.minHeight = '400px';
+            iframe.frameBorder = '0';
+            
+            // Replace container content with iframe
+            container.innerHTML = '';
+            container.appendChild(iframe);
+            
+            // Add fallback if iframe fails
+            iframe.onerror = function() {
                 container.innerHTML = `
-                    <div class="flex items-center justify-center h-full">
-                        <div class="text-center">
-                            <i class="fas fa-exclamation-triangle text-6xl text-red-400 mb-4"></i>
-                            <p class="text-gray-500">Gagal memuat PDF</p>
-                            <button onclick="openPDFViewer('${type}')" class="mt-4 text-blue-600 hover:underline">
-                                Buka di tab baru
+                    <div class="text-center p-8">
+                        <i class="fas fa-exclamation-triangle text-5xl text-yellow-500 mb-4"></i>
+                        <p class="text-gray-700 mb-4">PDF tidak dapat dimuat secara langsung</p>
+                        <p class="text-gray-600 mb-6">Anda dapat membuka PDF di tab baru atau mendownloadnya</p>
+                        <div class="flex gap-4 justify-center">
+                            <a href="${url}" target="_blank" 
+                               class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                <i class="fas fa-external-link-alt mr-2"></i> Buka di Tab Baru
+                            </a>
+                            <button onclick="downloadCurrentPDF()" 
+                                    class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                <i class="fas fa-download mr-2"></i> Download PDF
                             </button>
                         </div>
                     </div>
                 `;
-            }
-        }
-
-        // Render PDF page
-        async function renderPage(type, pageNum) {
-            if (!currentPDF) return;
-            
-            if (pageNum < 1 || pageNum > currentPDF.numPages) return;
-            
-            currentPageNum = pageNum;
-            
-            const container = document.getElementById(`${type}-preview`);
-            const canvas = document.createElement('canvas');
-            canvas.className = 'pdf-canvas';
-            
-            container.innerHTML = '';
-            container.appendChild(canvas);
-            
-            const page = await currentPDF.getPage(pageNum);
-            const viewport = page.getViewport({ scale: 1.5 });
-            
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            
-            const context = canvas.getContext('2d');
-            const renderContext = {
-                canvasContext: context,
-                viewport: viewport
             };
-            
-            await page.render(renderContext).promise;
-            
-            // Update page number display
-            document.getElementById(`${type}-page-num`).textContent = pageNum;
         }
 
-        // Change page
-        function changePage(type, direction) {
-            const newPageNum = currentPageNum + direction;
-            
-            // Get correct PDF based on type
-            if (type === 'cv') currentPDF = cvPDF;
-            else if (type === 'huawei') currentPDF = huaweiPDF;
-            else if (type === 'dpm') currentPDF = dpmPDF;
-            
-            if (currentPDF && newPageNum >= 1 && newPageNum <= currentPDF.numPages) {
-                renderPage(type, newPageNum);
-            }
-        }
-
-        // Download PDF
-        function downloadPDF(type) {
-            const url = pdfUrls[type];
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `${type}_certificate.pdf`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-
-        // Open PDF in modal
-        function openPDFViewer(type) {
+        function closePDFModal() {
             const modal = document.getElementById('pdfModal');
-            const frame = document.getElementById('pdfFrame');
-            const title = document.getElementById('modalTitle');
-            
-            let url = '';
-            let titleText = '';
-            
-            if (type === 'huawei') {
-                url = pdfUrls.huawei;
-                titleText = 'Sertifikat Huawei - AI Basic';
-            } else if (type === 'dpm') {
-                url = pdfUrls.dpm;
-                titleText = 'Sertifikat Dewan Perwakilan Mahasiswa';
-            } else {
-                url = pdfUrls.cv;
-                titleText = 'Curriculum Vitae - Kevin Mubarak';
-            }
-            
-            frame.src = url;
-            title.textContent = titleText;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Close PDF modal
-        function closePDFViewer() {
-            const modal = document.getElementById('pdfModal');
-            const frame = document.getElementById('pdfFrame');
-            
-            modal.classList.remove('active');
-            frame.src = '';
+            modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
+            
+            // Clear iframe to stop loading
+            const container = document.getElementById('pdfEmbedContainer');
+            container.innerHTML = '';
         }
 
-        // View CV button
-        document.getElementById('viewCV').addEventListener('click', () => {
-            // Scroll to PDF section and open CV tab
-            document.getElementById('pdfSection').scrollIntoView({ behavior: 'smooth' });
-            
-            // Activate CV tab
-            setTimeout(() => {
-                document.querySelector('[data-tab="cv"]').click();
-                
-                // Load CV PDF if not loaded
-                if (!cvPDF) {
-                    loadPDF('cv', pdfUrls.cv);
-                }
-            }, 500);
+        function downloadCurrentPDF() {
+            if (currentPDFType && pdfData[currentPDFType]) {
+                const url = pdfData[currentPDFType].url;
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${currentPDFType}_kevin_mubarak.pdf`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        // Open PDF in new tab (fallback function)
+        function openPDF(type) {
+            if (pdfData[type]) {
+                window.open(pdfData[type].url, '_blank');
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('pdfModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closePDFModal();
+            }
         });
 
-        // Initialize first tab (CV)
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closePDFModal();
+            }
+        });
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Load CV PDF initially
-            loadPDF('cv', pdfUrls.cv);
-            
             // Add hover effects to project cards
             document.querySelectorAll('.project-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
@@ -887,20 +739,15 @@
                     }
                 });
             });
-        });
-
-        // Close modal when clicking outside
-        document.getElementById('pdfModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePDFViewer();
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closePDFViewer();
-            }
+            
+            // For CV button - show a message since we don't have the actual CV URL
+            document.querySelector('button[onclick="showPDF(\'cv\')"]')?.addEventListener('click', function(e) {
+                // If CV PDF doesn't exist, show a message
+                if (!pdfData.cv.url || pdfData.cv.url === 'cv-kevin-mubarak.pdf') {
+                    e.preventDefault();
+                    alert('CV PDF sedang dalam persiapan. Untuk saat ini, Anda dapat melihat proyek dan sertifikat saya.');
+                }
+            });
         });
     </script>
 </body>
